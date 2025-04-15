@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Jane Doe | Medical Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+      
+<body>
+
+<header>
+  <h1>Jane Doe</h1>
+  <p>Medical Student | Future Physician</p>
+</header>
+
+<nav>
+    <div class="nav-container">
+      <!-- <div class="logo">Jane Doe</div> -->
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+<div class="profile-container">
+    <img src="profile.jpg" alt="Jane Doe Profile Photo" class="profile-img">
+    <h2>Jane Doe</h2>
+    <p>Medical Student | Future Physician</p>
+  </div>  
+
+<section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I’m a dedicated medical student passionate about patient care, research, and improving healthcare access.
+      With a background in biomedical sciences and a deep commitment to lifelong learning,
+      I am working toward a career in internal medicine and clinical research.
+    </p>
+  </section>
+  
+  <section id="resume" class="card">
+    <h2>Resume</h2>
+    <a class="download-btn" href="resume.pdf" download>📄 Download Resume</a>
+  
+    <div class="pdf-viewer">
+      <iframe src="resume.pdf#toolbar=0" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+  </section>
+  
+  
+  <section id="experience" class="card">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Clinical Research Assistant</strong> – University Hospital (2023–Present)</li>
+      <li><strong>Shadowing</strong> – Dr. Smith, Internal Medicine (2022)</li>
+      <li><strong>Volunteer</strong> – Local Health Clinic (2021–2022)</li>
+    </ul>
+  </section>
+  
+  <section id="education" class="card">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>MD Candidate</strong> – Example Medical School (Expected 2026)</li>
+      <li><strong>B.S. in Biology</strong> – State University (2022)</li>
+    </ul>
+  </section>
+  
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: janedoe@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a></p>
+  </section>
+  
+  <section id="research" class="card">
+    <h2>Research & Publications</h2>
+    <ul>
+      <li><strong>Doe J</strong>, Smith A. “The Role of Microbiota in GI Disorders.” <em>Journal of Medical Science</em>, 2024.</li>
+      <li><strong>Doe J</strong>, Johnson B. “Early Detection of Diabetes in Rural Communities.” Poster, AMA Student Research Symposium, 2023.</li>
+      <li><strong>Doe J</strong>. “Case Study: Rare Cardiovascular Presentations in Young Adults.” Internal Medicine Elective Report, 2022.</li>
+    </ul>
+  </section>
+  
+
+<footer>
+  <p>&copy; 2025 Jane Doe</p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+  
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
+</body>
+</html>
