@@ -18,7 +18,7 @@
   <nav>
     <div class="nav-container">
       <div class="nav-top">
-        <a href="index.html" class="logo" style="text-decoration: none;">ANGEL Xu</a>
+        <a href="index.html" class="logo">ANGEL XU</a>
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       </div>
       <ul class="nav-links" id="nav-links">
@@ -32,16 +32,31 @@
     </div>
   </nav>
 
-  <!-- Profile Header -->
+<!-- Hero Area using header tag instead of section -->
+<header class="hero-area">
   <div class="profile-container">
-    <img src="profile.jpg" alt="Angel Xu Profile Photo" class="profile-img" />
-    <h2>Angel Xu</h2>
-    <p>Medical Student | Future Physician</p>
+    <div class="profile-content">
+      <img src="profile.jpg" alt="Angel Xu Profile Photo" class="profile-img" />
+      <div class="profile-text">
+        <h1>Angel Xu</h1>
+        <p class="tagline">Medical Student | Future Physician</p>
+        <div class="profile-cta">
+          <a href="#contact" class="primary-btn">Contact Me</a>
+          <a href="/resume.html" class="secondary-btn">View Resume</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><i class="fas fa-heartbeat"></i> Internal Medicine</span>
+      <span class="badge"><i class="fas fa-microscope"></i> Clinical Research</span>
+      <span class="badge"><i class="fas fa-users"></i> Patient Care</span>
+    </div>
   </div>
+</header>
 
   <!-- Main Content -->
   <main>
-    <section id="about" class="card" data-aos="fade-up">
+    <section id="about" class="card">
       <h2>About Me</h2>
       <p>
         I’m a dedicated medical student passionate about patient care, research, and improving healthcare access.
@@ -50,7 +65,7 @@
       </p>
     </section>
 
-    <section id="resume" class="card" data-aos="fade-up">
+    <section id="resume" class="card">
       <h2>Resume</h2>
       <a class="download-btn" href="resume.pdf" download>
         <span class="download-text">📄 Download Resume</span>
@@ -60,37 +75,116 @@
       </div>
     </section>
 
-    <section id="experience" class="card" data-aos="fade-up">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Clinical Research Assistant</strong> – University Hospital (2023–Present)</li>
-        <li><strong>Shadowing</strong> – Dr. Smith, Internal Medicine (2022)</li>
-        <li><strong>Volunteer</strong> – Local Health Clinic (2021–2022)</li>
-      </ul>
-    </section>
 
-    <section id="education" class="card" data-aos="fade-up">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MD Candidate</strong> – Example Medical School (Expected 2026)</li>
-        <li><strong>B.S. in Biology</strong> – State University (2022)</li>
-      </ul>
-    </section>
+<!-- Experience Section with improved format -->
+<section id="experience" class="card">
+  <h2>Clinical Experience</h2>
+  <ul class="timeline-list">
+    <li>
+      <strong>Clinical Research Assistant</strong>
+      <em>University Hospital | 2023–Present</em>
+      <p>Assisted in data collection and analysis for clinical trials focused on cardiovascular health outcomes in diverse patient populations.</p>
+    </li>
+    <li>
+      <strong>Clinical Shadow</strong>
+      <em>Dr. Smith, Internal Medicine | Summer 2022</em>
+      <p>Shadowed attending physician during patient consultations, rounds, and treatment planning sessions.</p>
+    </li>
+    <li>
+      <strong>Volunteer</strong>
+      <em>Community Health Clinic | 2021–2022</em>
+      <p>Provided support to underserved patients, assisted with intake procedures, and helped coordinate care services.</p>
+    </li>
+  </ul>
+</section>
 
-    <section id="research" class="card" data-aos="fade-up">
-      <h2>Research & Publications</h2>
-      <ul>
-        <li><strong>Doe J</strong>, Smith A. “The Role of Microbiota in GI Disorders.” <em>Journal of Medical Science</em>, 2024.</li>
-        <li><strong>Doe J</strong>, Johnson B. “Early Detection of Diabetes in Rural Communities.” Poster, AMA Student Research Symposium, 2023.</li>
-        <li><strong>Doe J</strong>. “Case Study: Rare Cardiovascular Presentations in Young Adults.” Internal Medicine Elective Report, 2022.</li>
-      </ul>
-    </section>
+<!-- Education Section with improved format -->
+<section id="education" class="card">
+  <h2>Education</h2>
+  <ul class="timeline-list">
+    <li>
+      <strong>Doctor of Medicine (MD)</strong>
+      <em>Texas Christian University School of Medicine | Expected 2026</em>
+      <p>Current GPA: 3.9/4.0. Focus on internal medicine and clinical research.</p>
+    </li>
+    <li>
+      <strong>Bachelor of Science in Biology</strong>
+      <em>University of Texas | 2022</em>
+      <p>Graduated Summa Cum Laude, GPA: 3.95/4.0. Minor in Chemistry.</p>
+    </li>
+  </ul>
+</section>
 
-    <section id="contact" class="card" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p>Email: janedoe@example.com</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a></p>
-    </section>
+<!-- Research Section with improved format -->
+<section id="research" class="card">
+  <h2>Research & Publications</h2>
+  <ul class="timeline-list">
+    <li>
+      <strong>First Author Publication</strong>
+      <em>Journal of Medical Science | 2024</em>
+      <p><strong>Xu A</strong>, Smith A. "The Role of Microbiota in GI Disorders." <em>Journal of Medical Science</em>, 2024.</p>
+    </li>
+    <li>
+      <strong>Research Poster</strong>
+      <em>AMA Student Research Symposium | 2023</em>
+      <p><strong>Xu A</strong>, Johnson B. "Early Detection of Diabetes in Rural Communities." Awarded Best Clinical Research Poster.</p>
+    </li>
+    <li>
+      <strong>Case Study</strong>
+      <em>Internal Medicine Elective | 2022</em>
+      <p><strong>Xu A</strong>. "Case Study: Rare Cardiovascular Presentations in Young Adults."</p>
+    </li>
+  </ul>
+</section>
+
+<!-- Contact Section with Improved Icon Placement -->
+<section id="contact" class="card">
+  <h2>Get In Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-header">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+        </div>
+        <p><a href="mailto:angel.xu@example.com">angel.xu@example.com</a></p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-header">
+          <i class="fab fa-linkedin"></i>
+          <h3>LinkedIn</h3>
+        </div>
+        <p><a href="https://linkedin.com/in/angelxu" target="_blank">linkedin.com/in/angelxu</a></p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-header">
+          <i class="fas fa-university"></i>
+          <h3>School</h3>
+        </div>
+        <p>TCU School of Medicine</p>
+      </div>
+    </div>
+    
+    <div class="contact-form">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="primary-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <!-- Footer -->
@@ -112,24 +206,5 @@
       </a>
     </div>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: false,
-      offset: 100
-    });
-  </script>
 </body>
 </html>
