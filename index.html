@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Angel Sheu | Medical Student</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-      
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel Xu | Medical Student</title>
 
-<nav>
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
     <div class="nav-container">
       <div class="nav-top">
-        <a href="index.html" class="logo" style="text-decoration: none;">ANGEL SHEU</a>
+        <a href="index.html" class="logo" style="text-decoration: none;">ANGEL Xu</a>
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       </div>
       <ul class="nav-links" id="nav-links">
@@ -27,107 +31,105 @@
       </ul>
     </div>
   </nav>
-  
-<div class="profile-container">
-    <img src="profile.jpg" alt="Angel Sheu Profile Photo" class="profile-img">
-    <h2>Angel Sheu</h2>
+
+  <!-- Profile Header -->
+  <div class="profile-container">
+    <img src="profile.jpg" alt="Angel Xu Profile Photo" class="profile-img" />
+    <h2>Angel Xu</h2>
     <p>Medical Student | Future Physician</p>
-  </div>  
-
-<main>
-  <section id="about" data-aos="fade-up" class="card">
-    <h2>About Me</h2>
-    <p>
-      I’m a dedicated medical student passionate about patient care, research, and improving healthcare access.
-      With a background in biomedical sciences and a deep commitment to lifelong learning,
-      I am working toward a career in internal medicine and clinical research.
-    </p>
-  </section>
-  
-  <section id="resume" data-aos="fade-up" class="card">
-    <h2>Resume</h2>
-    <a class="download-btn" href="resume.pdf" download><span class="download-text">📄 Download Resume</span></a>
-  
-    <div class="pdf-viewer">
-      <iframe src="resume.pdf#toolbar=0" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-  </section>
-  
-  
-  <section id="experience" data-aos="fade-up" class="card">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Clinical Research Assistant</strong> – University Hospital (2023–Present)</li>
-      <li><strong>Shadowing</strong> – Dr. Smith, Internal Medicine (2022)</li>
-      <li><strong>Volunteer</strong> – Local Health Clinic (2021–2022)</li>
-    </ul>
-  </section>
-  
-  <section id="education" data-aos="fade-up" class="card">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>MD Candidate</strong> – Example Medical School (Expected 2026)</li>
-      <li><strong>B.S. in Biology</strong> – State University (2022)</li>
-    </ul>
-  </section>
-  
-  <section id="contact" data-aos="fade-up" class="card">
-    <h2>Contact</h2>
-    <p>Email: janedoe@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a></p>
-  </section>
-  
-  <section id="research" data-aos="fade-up" class="card">
-    <h2>Research & Publications</h2>
-    <ul>
-      <li><strong>Doe J</strong>, Smith A. “The Role of Microbiota in GI Disorders.” <em>Journal of Medical Science</em>, 2024.</li>
-      <li><strong>Doe J</strong>, Johnson B. “Early Detection of Diabetes in Rural Communities.” Poster, AMA Student Research Symposium, 2023.</li>
-      <li><strong>Doe J</strong>. “Case Study: Rare Cardiovascular Presentations in Young Adults.” Internal Medicine Elective Report, 2022.</li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 Angel Sheu</p>
-  <div class="footer-content">
-    <!-- NEED TO CHANGE TO LinkedIN LINK -->
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
-      <i class="fab fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-    <!-- NEED TO CHANGE TO PUBMED LINK -->
-    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=AngelSheu" target="_blank" aria-label="PubMed" class="footer-link swing">
-      <i class="fas fa-book-medical"></i>
-      <span>PubMed</span>
-    </a>
-    <!-- NEED TO CHANGE TO TCU LINK -->
-    <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
-      <i class="fas fa-university"></i>
-      <span>TCU</span>
-    </a>
   </div>
-</footer>
 
-<script>
-    const menuToggle = document.getElementById('mobile-menu');
+  <!-- Main Content -->
+  <main>
+    <section id="about" class="card" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        I’m a dedicated medical student passionate about patient care, research, and improving healthcare access.
+        With a background in biomedical sciences and a deep commitment to lifelong learning,
+        I am working toward a career in internal medicine and clinical research.
+      </p>
+    </section>
+
+    <section id="resume" class="card" data-aos="fade-up">
+      <h2>Resume</h2>
+      <a class="download-btn" href="resume.pdf" download>
+        <span class="download-text">📄 Download Resume</span>
+      </a>
+      <div class="pdf-viewer">
+        <iframe src="resume.pdf#toolbar=0" width="100%" height="100%" frameborder="0"></iframe>
+      </div>
+    </section>
+
+    <section id="experience" class="card" data-aos="fade-up">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Clinical Research Assistant</strong> – University Hospital (2023–Present)</li>
+        <li><strong>Shadowing</strong> – Dr. Smith, Internal Medicine (2022)</li>
+        <li><strong>Volunteer</strong> – Local Health Clinic (2021–2022)</li>
+      </ul>
+    </section>
+
+    <section id="education" class="card" data-aos="fade-up">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MD Candidate</strong> – Example Medical School (Expected 2026)</li>
+        <li><strong>B.S. in Biology</strong> – State University (2022)</li>
+      </ul>
+    </section>
+
+    <section id="research" class="card" data-aos="fade-up">
+      <h2>Research & Publications</h2>
+      <ul>
+        <li><strong>Doe J</strong>, Smith A. “The Role of Microbiota in GI Disorders.” <em>Journal of Medical Science</em>, 2024.</li>
+        <li><strong>Doe J</strong>, Johnson B. “Early Detection of Diabetes in Rural Communities.” Poster, AMA Student Research Symposium, 2023.</li>
+        <li><strong>Doe J</strong>. “Case Study: Rare Cardiovascular Presentations in Young Adults.” Internal Medicine Elective Report, 2022.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Email: janedoe@example.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Angel Xu</p>
+    <div class="footer-content">
+      <!-- Update with actual profile links -->
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+        <i class="fas fa-book-medical"></i>
+        <span>PubMed</span>
+      </a>
+      <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
+        <i class="fas fa-university"></i>
+        <span>TCU</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-  
+
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
-</script>
+  </script>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1200,
-    once: false,
-    offset: 100
-  });
-</script>  
-
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: false,
+      offset: 100
+    });
+  </script>
 </body>
 </html>
-
-
-<!-- change cards so that it can have multiple in a row (widgets?) -->
