@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me - Angel Sheu</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_contact.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
@@ -13,7 +13,7 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <div class="logo">ANGEL SHEU</div>
+      <a href="index.html" class="logo" style="text-decoration: none;">ANGEL SHEU</a>
       <ul class="nav-links">
         <li><a href="/about.html">About</a></li>
         <li><a href="/resume.html">Resume</a></li>
@@ -28,18 +28,24 @@
   <!-- Main Section -->
   <main class="main-content">
 
-    <section id="about" data-aos="fade-up" class="card">
-      <div class="widget-card about-card" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          I'm Jane Doe, a dedicated medical student at Texas Christian University passionate about research, innovation, and community service.
-          I thrive in collaborative environments and strive to make a meaningful impact in the field of medicine through patient care and academic excellence.
-        </p>
-        <p>
-          My background includes clinical volunteering, published research in neuroscience and immunology, and a growing interest in integrative healthcare. I love working with diverse teams and learning from new perspectives.
-        </p>
+    <section class="contact-section">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to connect with me on LinkedIn or send me an email.</p>
+    
+      <div class="contact-cards">
+        <a href="https://www.linkedin.com/in/janedoe" target="_blank" class="contact-card linkedin">
+          <i class="fab fa-linkedin"></i>
+          <span>Connect on LinkedIn</span>
+        </a>
+    
+        <!-- NEED TO CHANGE TO ANGEL EMAIL -->
+        <a href="mailto:jane.doe@email.com" class="contact-card email">
+          <i class="fas fa-envelope"></i>
+          <span>Email Me</span>
+        </a>
       </div>
     </section>
+    
 
   </main>
 
