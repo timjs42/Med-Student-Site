@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me - Angel Sheu</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume | Medical Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
@@ -24,40 +24,297 @@
     </div>
   </nav>
 
-  <!-- Main Section -->
-  <main class="main-content">
-
-    <section id="about" data-aos="fade-up" class="card">
-      <div class="widget-card about-card" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          I'm Jane Doe, a dedicated medical student at Texas Christian University passionate about research, innovation, and community service.
-          I thrive in collaborative environments and strive to make a meaningful impact in the field of medicine through patient care and academic excellence.
-        </p>
-        <p>
-          My background includes clinical volunteering, published research in neuroscience and immunology, and a growing interest in integrative healthcare. I love working with diverse teams and learning from new perspectives.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <a href="https://www.linkedin.com/in/janedoe" class="footer-link swing" target="_blank">
-        <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-      </a>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=doe+jane" class="footer-link swing" target="_blank">
-        <i class="fas fa-book-medical"></i> <span>PubMed</span>
-      </a>
-      <a href="https://tcu.edu" class="footer-link swing" target="_blank">
-        <i class="fas fa-university"></i> <span>TCU</span>
-      </a>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="header-container">
+            <h1>My Professional Resume</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                Resume
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+    <div class="container">
+        <!-- Resume Introduction -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-file-alt"></i>
+                <h2>Resume Overview</h2>
+            </div>
+            <div class="about-flex">
+                <div class="about-image">
+                    <img src="/images/jane-doe.jpg" alt="Profile Image" class="profile-img">
+                    <div class="badges-container">
+                        <div class="badge"><i class="fas fa-graduation-cap"></i> Medical Student</div>
+                        <div class="badge"><i class="fas fa-microscope"></i> Researcher</div>
+                    </div>
+                </div>
+                <div class="about-bio">
+                    <p>My resume highlights my academic journey, clinical experience, research accomplishments, and leadership roles. I'm passionate about advancing medical knowledge and providing excellent patient care.</p>
+                    <p>Below you can view and download my complete resume. For more detailed information about specific projects or experiences, please navigate to the relevant sections of this portfolio.</p>
+                    
+                    <div class="quote">
+                        "Dedicated to evidence-based medicine and continuous professional development to provide the best possible care to patients."
+                    </div>
+                    
+                    <div class="profile-cta">
+                        <a href="#resume-viewer" class="primary-btn"><i class="fas fa-eye"></i> View Resume</a>
+                        <a href="resume.pdf" download class="secondary-btn"><i class="fas fa-download"></i> Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Viewer -->
+        <div class="card" id="resume-viewer">
+            <div class="section-header">
+                <i class="fas fa-file-pdf"></i>
+                <h2>Resume Preview</h2>
+            </div>
+            
+            <div class="pdf-container">
+                <embed src="/resume.pdf" type="application/pdf" class="pdf-viewer">
+                <p class="pdf-fallback"><a href="resume.pdf" download class="download-btn"><i class="fas fa-download"></i> Download PDF</a></p>
+            </div>
+        </div>
+
+        <!-- Resume Highlights -->
+        <div class="two-column">
+            <!-- Key Skills Section -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-star"></i>
+                    <h2>Key Skills</h2>
+                </div>
+                <div class="skills-section">
+                    <h3>Clinical Skills</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Patient Assessment</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Medical Documentation</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Clinical Procedures</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <h3>Research Skills</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Data Analysis</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Scientific Writing</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-certificate"></i>
+                    <h2>Certifications</h2>
+                </div>
+                <div class="cert-items">
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Basic Life Support (BLS)</h4>
+                            <p>American Heart Association · 2023-2025</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-hospital-user"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Advanced Cardiac Life Support (ACLS)</h4>
+                            <p>American Heart Association · 2023-2025</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-notes-medical"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Pediatric Advanced Life Support (PALS)</h4>
+                            <p>American Heart Association · 2023-2025</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>HIPAA Compliance Certification</h4>
+                            <p>Health Information Management · 2022-2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career Objectives -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-compass"></i>
+                <h2>Career Objectives</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Clinical Excellence</h3>
+                        <p>Develop exceptional clinical skills through rigorous training and diverse patient care experiences to provide comprehensive and compassionate healthcare.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Research Contribution</h3>
+                        <p>Contribute to the advancement of medical knowledge through meaningful research that addresses critical healthcare challenges and improves patient outcomes.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Community Impact</h3>
+                        <p>Engage with underserved communities to address healthcare disparities and promote health equity through education, advocacy, and direct service.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Continuous Learning</h3>
+                        <p>Maintain a commitment to lifelong learning and professional development to stay at the forefront of medical advancements and best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="contact-cta">
+            <div class="cta-content">
+                <h2>Let's Connect</h2>
+                <p>Interested in discussing potential opportunities or collaboration? Feel free to reach out to me directly through my contact page or download my resume for more information.</p>
+                <div class="button-group">
+                    <a href="contact.html" class="primary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                    <a href="resume.pdf" download class="secondary-btn"><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Angel Xu</p>
+      <div class="footer-content">
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+          <i class="fas fa-book-medical"></i>
+          <span>PubMed</span>
+        </a>
+        <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
+          <i class="fas fa-university"></i>
+          <span>TCU</span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation to PDF viewer on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const resumeViewer = document.getElementById('resume-viewer');
+            
+            function animateOnScroll() {
+                const viewerPosition = resumeViewer.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight;
+                
+                if(viewerPosition < screenPosition - 100) {
+                    resumeViewer.style.opacity = '1';
+                    resumeViewer.style.transform = 'translateY(0)';
+                }
+            }
+            
+            // Initial styling for animation
+            resumeViewer.style.opacity = '0';
+            resumeViewer.style.transform = 'translateY(30px)';
+            resumeViewer.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            
+            // Check position on scroll
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Check position on load
+            animateOnScroll();
+        });
+    </script>
 </body>
 </html>
