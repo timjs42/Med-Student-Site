@@ -1,70 +1,266 @@
-<!-- widgets with linkedin and or other social media  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me - Angel Sheu</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Medical Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-top">
+                <a href="index.html" class="logo">DR. JAMES WILSON</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="logo" style="text-decoration: none;">ANGEL SHEU</a>
-      <ul class="nav-links">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/resume.html">Resume</a></li>
-        <li><a href="/experience.html">Experience</a></li>
-        <li><a href="/education.html">Education</a></li>
-        <li><a href="/research.html">Research</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-container">
+            <h1>Contact Me</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Contact
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-comment-dots"></i>
+                <h2>Get In Touch</h2>
+            </div>
+            <p>I'm always interested in connecting with fellow medical students, healthcare professionals, or anyone interested in medical research and education. Please feel free to reach out using any of the methods below.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-header">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                        </div>
+                        <p><a href="mailto:james.wilson@tcu.edu">james.wilson@tcu.edu</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-header">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                        </div>
+                        <p><a href="tel:+18175551234">(817) 555-1234</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Office Location</h3>
+                        </div>
+                        <p>TCU School of Medicine<br>3430 Camp Bowie Blvd<br>Fort Worth, TX 76107</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-header">
+                            <i class="fas fa-clock"></i>
+                            <h3>Office Hours</h3>
+                        </div>
+                        <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>Friday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-map"></i>
+                <h2>Find Me</h2>
+            </div>
+            <div class="map-container">
+                <div class="responsive-map">
+                    <!-- Placeholder for map iframe -->
+                    <img src="/api/placeholder/800/400" alt="Map location" class="map-placeholder">
+                </div>
+                <div class="map-info">
+                    <p>The TCU School of Medicine is located in the heart of Fort Worth's medical district, right next to major hospital systems and research facilities.</p>
+                    <a href="https://maps.google.com" target="_blank" class="secondary-btn">Get Directions</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connect Section -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-share-alt"></i>
+                <h2>Connect With Me</h2>
+            </div>
+            <div class="social-connect">
+                <p>Follow me on social media platforms to stay updated with my latest research, publications, and medical insights.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-researchgate"></i>
+                        <span>ResearchGate</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-orcid"></i>
+                        <span>ORCID</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-question-circle"></i>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-plus"></i>
+                        <h3>Question1?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>answer 1 illum epson siepoand opiofnaase</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-plus"></i>
+                        <h3>Question 2 how what?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>answer 2 ilium aepson eisuflo aslfiglkl ethnas fi</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-plus"></i>
+                        <h3>wehat when is the best?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>TCU asndifaowioer TCU asldfkgdjsf</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-plus"></i>
+                        <h3>Question 3?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Answer 3 helooas ditpopsf isllikjm epson elilsif fijd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="contact-cta">
+            <div class="cta-content">
+                <h2>Have Questions?</h2>
+                <p>If you have specific questions about my research, speaking engagements, or academic collaboration opportunities, don't hesitate to reach out.</p>
+                <div class="button-group">
+                    <a href="mailto:james.wilson@tcu.edu" class="primary-btn"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="research.html" class="secondary-btn"><i class="fas fa-flask"></i> View My Research</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <!-- Main Section -->
-  <main class="main-content">
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:james.wilson@tcu.edu" class="footer-link swing">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="#" class="footer-link swing">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="#" class="footer-link swing">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="#" class="footer-link swing">
+                <i class="fas fa-phone"></i> (817) 555-1234
+            </a>
+        </div>
+        <p>&copy; 2025 Dr. James Wilson. All rights reserved.</p>
+    </footer>
 
-    <section class="contact-section">
-      <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, feel free to connect with me on LinkedIn or send me an email.</p>
-    
-      <div class="contact-cards">
-        <a href="https://www.linkedin.com/in/janedoe" target="_blank" class="contact-card linkedin">
-          <i class="fab fa-linkedin"></i>
-          <span>Connect on LinkedIn</span>
-        </a>
-    
-        <!-- NEED TO CHANGE TO ANGEL EMAIL -->
-        <a href="mailto:jane.doe@email.com" class="contact-card email">
-          <i class="fas fa-envelope"></i>
-          <span>Email Me</span>
-        </a>
-      </div>
-    </section>
-    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
 
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <a href="https://www.linkedin.com/in/janedoe" class="footer-link swing" target="_blank">
-        <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-      </a>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=doe+jane" class="footer-link swing" target="_blank">
-        <i class="fas fa-book-medical"></i> <span>PubMed</span>
-      </a>
-      <a href="https://tcu.edu" class="footer-link swing" target="_blank">
-        <i class="fas fa-university"></i> <span>TCU</span>
-      </a>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question i').className = 'fas fa-plus';
+                });
+                
+                // If the clicked item wasn't already open, open it
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                    question.querySelector('i').className = 'fas fa-minus';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
