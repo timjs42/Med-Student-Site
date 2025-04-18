@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me - Angel Xu</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Medical Student Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <a href="index.html" class="logo" style="text-decoration: none;">ANGEL XU</a>
-      <ul class="nav-links">
+      <div class="nav-top">
+        <a href="index.html" class="logo">ANGEL XU</a>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="/about.html">About</a></li>
         <li><a href="/resume.html">Resume</a></li>
-        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/experience.html" class="active">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html">Research</a></li>
         <li><a href="/contact.html">Contact</a></li>
@@ -24,40 +27,275 @@
     </div>
   </nav>
 
-  <!-- Main Section -->
-  <main class="main-content">
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-container">
+            <h1>Professional Experience</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Experience
+            </div>
+        </div>
+    </header>
 
-    <section id="about" data-aos="fade-up" class="card">
-      <div class="widget-card about-card" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          I'm Jane Doe, a dedicated medical student at Texas Christian University passionate about research, innovation, and community service.
-          I thrive in collaborative environments and strive to make a meaningful impact in the field of medicine through patient care and academic excellence.
-        </p>
-        <p>
-          My background includes clinical volunteering, published research in neuroscience and immunology, and a growing interest in integrative healthcare. I love working with diverse teams and learning from new perspectives.
-        </p>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-stethoscope"></i>
+                <h2>My Clinical Journey</h2>
+            </div>
+            <p>My journey in medicine has been shaped by diverse clinical experiences that have strengthened my commitment to patient care and medical excellence. Each opportunity has provided unique insights into different aspects of healthcare delivery and reinforced my passion for becoming a compassionate physician.</p>
+            <div class="quote">
+                "The good physician treats the disease; the great physician treats the patient who has the disease." — William Osler
+            </div>
+        </div>
 
-  </main>
+        <!-- Hospital Experience Section -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-hospital"></i>
+                <h2>Hospital Rotations</h2>
+            </div>
+            <ul class="timeline-list">
+                <li>
+                    <strong>Internal Medicine Rotation</strong>
+                    <em>Texas Health Harris Methodist Hospital | Fort Worth, TX | June 2024 - Present</em>
+                    <p>Shadowed attending physicians during patient rounds and participated in case discussions. Observed diagnostic procedures and gained experience in interpreting lab results and developing treatment plans for complex cases.</p>
+                </li>
+                <li>
+                    <strong>Emergency Medicine Clerkship</strong>
+                    <em>TCU Medical Center | Fort Worth, TX | Jan 2024 - May 2024</em>
+                    <p>Assisted with triage assessments and patient intake. Observed procedures including suturing, fracture management, and emergency resuscitation protocols. Developed rapid diagnostic skills in a high-pressure environment.</p>
+                </li>
+                <li>
+                    <strong>Pediatrics Rotation</strong>
+                    <em>Cook Children's Medical Center | Fort Worth, TX | Aug 2023 - Dec 2023</em>
+                    <p>Participated in well-child visits and acute care. Learned age-specific assessment techniques and gained experience in communicating with young patients and their families. Observed specialized pediatric procedures.</p>
+                </li>
+            </ul>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <a href="https://www.linkedin.com/in/janedoe" class="footer-link swing" target="_blank">
-        <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-      </a>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=doe+jane" class="footer-link swing" target="_blank">
-        <i class="fas fa-book-medical"></i> <span>PubMed</span>
-      </a>
-      <a href="https://tcu.edu" class="footer-link swing" target="_blank">
-        <i class="fas fa-university"></i> <span>TCU</span>
-      </a>
+        <!-- Two Column Layout for Clinic and Research Experience -->
+        <div class="two-column">
+            <!-- Clinical Experience -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-user-md"></i>
+                    <h2>Clinical Experience</h2>
+                </div>
+                <ul class="timeline-list">
+                    <li>
+                        <strong>Family Medicine Preceptorship</strong>
+                        <em>Community Health Clinic | Dallas, TX | Mar 2023 - July 2023</em>
+                        <p>Assisted primary care physicians with patient visits and follow-ups. Conducted initial patient interviews and documented medical histories. Gained experience in preventive care and chronic disease management.</p>
+                    </li>
+                    <li>
+                        <strong>Psychiatry Observership</strong>
+                        <em>Mental Health Institute | Arlington, TX | Nov 2022 - Feb 2023</em>
+                        <p>Shadowed psychiatrists during outpatient consultations. Observed therapeutic approaches for various mental health conditions. Developed understanding of psychiatric assessment and medication management.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Volunteer Experience -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-hands-helping"></i>
+                    <h2>Volunteer Experience</h2>
+                </div>
+                <ul class="timeline-list">
+                    <li>
+                        <strong>Medical Mission Trip</strong>
+                        <em>Global Health Initiative | Rural Guatemala | Summer 2023</em>
+                        <p>Participated in a two-week medical mission providing basic healthcare services to underserved communities. Assisted with patient intake, vital signs assessment, and medication distribution.</p>
+                    </li>
+                    <li>
+                        <strong>COVID-19 Vaccination Clinic</strong>
+                        <em>TCU Community Outreach | Fort Worth, TX | Spring 2022</em>
+                        <p>Volunteered at community vaccination clinics, assisting with patient registration, education, and post-vaccination monitoring. Helped administer over 500 vaccines during weekend clinics.</p>
+                    </li>
+                    <li>
+                        <strong>Free Health Screening Program</strong>
+                        <em>Student-Run Clinic | Fort Worth, TX | 2021 - 2022</em>
+                        <p>Participated in monthly health screenings offering blood pressure checks, glucose testing, and basic health education to underserved populations. Helped coordinate follow-up referrals for at-risk patients.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills and Competencies -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Clinical Skills & Competencies</h2>
+            </div>
+            
+            <div class="skills-section">
+                <h3>Patient Care</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>History Taking</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Physical Examination</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Patient Education</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 92%"></div>
+                    </div>
+                </div>
+                
+                <h3>Technical Skills</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Venipuncture</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>EKG Interpretation</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Suturing</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <h3>Interpersonal Skills</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Patient Communication</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Interdisciplinary Collaboration</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Cultural Competency</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reflections Section -->
+        <div class="card">
+            <div class="section-header">
+                <i class="fas fa-comment-medical"></i>
+                <h2>Clinical Reflections</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>The Art of Listening</h3>
+                        <p>During my family medicine rotation, I learned that listening is perhaps the most underrated diagnostic tool. A patient's own narrative often contains critical clues to their diagnosis that might be missed in lab work or imaging. This experience reinforced my commitment to patient-centered care.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Critical Moments in the ER</h3>
+                        <p>Witnessing the resuscitation of a cardiac arrest patient in the emergency department was a profound moment in my training. The coordinated effort of the healthcare team demonstrated the importance of clear communication and well-practiced protocols when minutes matter most.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Global Health Perspective</h3>
+                        <p>My medical mission to Guatemala opened my eyes to healthcare disparities and the importance of adaptability in resource-limited settings. This experience has inspired my interest in global health initiatives and finding innovative solutions to improve healthcare access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="button-group">
+            <a href="research.html" class="primary-btn">View Research Projects</a>
+            <a href="contact.html" class="secondary-btn">Contact Me</a>
+        </div>
     </div>
-  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:medstudent@example.com" class="footer-link swing">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://linkedin.com/" class="footer-link swing">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://twitter.com/" class="footer-link swing">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="tel:+11234567890" class="footer-link swing">
+                <i class="fas fa-phone"></i> Call
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Navigation Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

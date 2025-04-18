@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me - Angel Xu</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Medical Student Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Navigation -->
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
@@ -18,46 +19,431 @@
         <li><a href="/resume.html">Resume</a></li>
         <li><a href="/experience.html">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
-        <li><a href="/research.html">Research</a></li>
+        <li><a href="/research.html" class="active">Research</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Section -->
-  <main class="main-content">
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-container">
+            <h1>My Research</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Research
+            </div>
+        </div>
+    </header>
 
-    <section id="about" data-aos="fade-up" class="card">
-      <div class="widget-card about-card" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          I'm Jane Doe, a dedicated medical student at Texas Christian University passionate about research, innovation, and community service.
-          I thrive in collaborative environments and strive to make a meaningful impact in the field of medicine through patient care and academic excellence.
-        </p>
-        <p>
-          My background includes clinical volunteering, published research in neuroscience and immunology, and a growing interest in integrative healthcare. I love working with diverse teams and learning from new perspectives.
-        </p>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Research Overview -->
+        <section class="card">
+            <div class="section-header">
+                <i class="fas fa-microscope"></i>
+                <h2>Research Overview</h2>
+            </div>
+            <p>As a medical student at Texas Christian University School of Medicine, my research focuses on innovative approaches to cardiovascular health, neurological disorders, and emerging infectious diseases. I am passionate about translational research that bridges the gap between laboratory discoveries and clinical applications.</p>
+            
+            <div class="quote">
+                "The goal of my research is not just to understand disease mechanisms, but to develop practical solutions that can improve patient outcomes and quality of life."
+            </div>
+            
+            <p>Below you'll find information about my current research projects, publications, and academic collaborations. I'm always open to discussing potential research partnerships and mentorship opportunities.</p>
+        </section>
 
-  </main>
+        <!-- Research Areas in Two Columns -->
+        <div class="two-column">
+            <!-- Current Projects -->
+            <section class="card">
+                <div class="section-header">
+                    <i class="fas fa-flask"></i>
+                    <h2>Current Projects</h2>
+                </div>
+                
+                <ul class="timeline-list">
+                    <li>
+                        <strong>Novel Biomarkers for Early Detection of Cardiovascular Disease</strong>
+                        <em>Principal Investigator | 2023 - Present</em>
+                        <p>Investigating plasma microRNA profiles as potential early indicators of atherosclerosis progression in high-risk populations.</p>
+                    </li>
+                    <li>
+                        <strong>Neural Correlates of Cognitive Decline in Aging</strong>
+                        <em>Research Associate | 2022 - Present</em>
+                        <p>Using advanced neuroimaging techniques to identify predictive markers of cognitive impairment before clinical symptoms appear.</p>
+                    </li>
+                    <li>
+                        <strong>Immunological Response to SARS-CoV-2 Variants</strong>
+                        <em>Co-Investigator | 2021 - Present</em>
+                        <p>Analyzing T-cell responses to emerging viral variants to better understand long-term immunity and vaccine efficacy.</p>
+                    </li>
+                </ul>
+            </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <a href="https://www.linkedin.com/in/janedoe" class="footer-link swing" target="_blank">
-        <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-      </a>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=doe+jane" class="footer-link swing" target="_blank">
-        <i class="fas fa-book-medical"></i> <span>PubMed</span>
-      </a>
-      <a href="https://tcu.edu" class="footer-link swing" target="_blank">
-        <i class="fas fa-university"></i> <span>TCU</span>
-      </a>
+            <!-- Publications -->
+            <section class="card">
+                <div class="section-header">
+                    <i class="fas fa-book-medical"></i>
+                    <h2>Publications</h2>
+                </div>
+                
+                <ul class="timeline-list">
+                    <li>
+                        <strong>Smith A, Johnson B, et al. (2024)</strong>
+                        <em>Journal of Clinical Investigation</em>
+                        <p>"Circulating microRNA-145 as a Potential Biomarker for Early-Stage Atherosclerosis: A Prospective Cohort Study"</p>
+                    </li>
+                    <li>
+                        <strong>Williams C, Smith A, et al. (2023)</strong>
+                        <em>Neurology</em>
+                        <p>"Functional Connectivity Changes Preceding Mild Cognitive Impairment: A 5-Year Longitudinal Study"</p>
+                    </li>
+                    <li>
+                        <strong>Rodriguez J, Smith A, Chang D. (2022)</strong>
+                        <em>Immunity</em>
+                        <p>"Cross-Reactive T Cell Responses to SARS-CoV-2 Variants of Concern Among Vaccinated and Naturally Infected Individuals"</p>
+                    </li>
+                    <li>
+                        <strong>Smith A, Lee P. (2021)</strong>
+                        <em>Medical Education</em>
+                        <p>"Integrating Research Opportunities into Medical Education: A Survey of Student Perspectives"</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Research Methodology -->
+        <section class="card">
+            <div class="section-header">
+                <i class="fas fa-vial"></i>
+                <h2>Research Methodology</h2>
+            </div>
+            
+            <div class="skills-section">
+                <h3>Technical Expertise</h3>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>PCR & qRT-PCR Analysis</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Cell Culture & Tissue Engineering</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Flow Cytometry</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Confocal Microscopy</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Western Blotting</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <h3>Data Analysis Skills</h3>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>R Statistical Programming</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Bioinformatics</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>SPSS & Statistical Analysis</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Collaborations -->
+        <section class="card">
+            <div class="section-header">
+                <i class="fas fa-users"></i>
+                <h2>Collaborations & Partnerships</h2>
+            </div>
+            
+            <ul class="list-with-icons">
+                <li>
+                    <i class="fas fa-hospital"></i>
+                    <div class="list-content">
+                        <h3>TCU & UNTHSC School of Medicine</h3>
+                        <p>Primary research affiliation with access to state-of-the-art laboratory facilities and clinical research infrastructure.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-dna"></i>
+                    <div class="list-content">
+                        <h3>Cardiothoracic Research Institute</h3>
+                        <p>Collaborative partnership on vascular biomarker research and development of diagnostic tools for early cardiovascular disease detection.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-brain"></i>
+                    <div class="list-content">
+                        <h3>National Institute of Neurological Disorders</h3>
+                        <p>Research affiliate contributing to multi-center studies on neurodegenerative diseases and cognitive aging.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-microscope"></i>
+                    <div class="list-content">
+                        <h3>Fort Worth BioResearch Consortium</h3>
+                        <p>Member of local research network facilitating cross-institutional collaboration and resource sharing.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Conference Presentations -->
+        <section class="card">
+            <div class="section-header">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h2>Conference Presentations</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>American Heart Association Scientific Sessions (2024)</h3>
+                        <p>Oral presentation: "Novel miRNA Biomarkers for Atherosclerosis Risk Stratification in Asymptomatic Patients"</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Society for Neuroscience Annual Meeting (2023)</h3>
+                        <p>Poster presentation: "Functional Connectivity Alterations as Predictors of Cognitive Decline in Aging Adults"</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>International Congress of Immunology (2022)</h3>
+                        <p>Poster presentation: "T Cell Epitope Conservation Across SARS-CoV-2 Variants: Implications for Long-Term Immunity"</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>American Medical Student Association Research Symposium (2021)</h3>
+                        <p>Oral presentation: "Research Integration in Medical Education: Challenges and Opportunities"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Grants & Awards -->
+        <div class="two-column">
+            <section class="card">
+                <div class="section-header">
+                    <i class="fas fa-award"></i>
+                    <h2>Grants & Funding</h2>
+                </div>
+                
+                <ul class="timeline-list">
+                    <li>
+                        <strong>NIH F30 Ruth L. Kirschstein Fellowship</strong>
+                        <em>2023-2026 | $150,000</em>
+                        <p>Predoctoral fellowship supporting research on cardiovascular biomarkers and clinical training.</p>
+                    </li>
+                    <li>
+                        <strong>American Heart Association Predoctoral Fellowship</strong>
+                        <em>2022-2024 | $52,000</em>
+                        <p>Research support for investigation of novel cardiovascular disease biomarkers.</p>
+                    </li>
+                    <li>
+                        <strong>TCU School of Medicine Research Grant</strong>
+                        <em>2021-2022 | $15,000</em>
+                        <p>Institutional funding for preliminary studies on neuroimaging in cognitive decline.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <div class="section-header">
+                    <i class="fas fa-trophy"></i>
+                    <h2>Honors & Recognition</h2>
+                </div>
+                
+                <ul class="timeline-list">
+                    <li>
+                        <strong>Young Investigator Award</strong>
+                        <em>American Heart Association | 2024</em>
+                        <p>Recognized for outstanding research contributions in cardiovascular diagnostics.</p>
+                    </li>
+                    <li>
+                        <strong>Travel Award</strong>
+                        <em>Society for Neuroscience | 2023</em>
+                        <p>Competitive award supporting conference attendance and presentation.</p>
+                    </li>
+                    <li>
+                        <strong>Outstanding Research Poster</strong>
+                        <em>TCU Research Symposium | 2022</em>
+                        <p>First place in medical student research category.</p>
+                    </li>
+                    <li>
+                        <strong>Alpha Omega Alpha Honor Society</strong>
+                        <em>TCU Chapter | 2021</em>
+                        <p>Selected for membership based on academic excellence and research potential.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Research Resources & Tools -->
+        <section class="card">
+            <div class="section-header">
+                <i class="fas fa-tools"></i>
+                <h2>Research Resources</h2>
+            </div>
+            
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="interest-text">
+                        <h3>Databases & Repositories</h3>
+                        <p>Access to PubMed, Web of Science, GenBank, and proprietary TCU research databases for comprehensive literature and data analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="interest-text">
+                        <h3>Computational Resources</h3>
+                        <p>High-performance computing access through the TCU Research Computing Center for bioinformatics and statistical analyses.</p>
+                    </div>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="interest-text">
+                        <h3>Clinical Research Facilities</h3>
+                        <p>Access to clinical research units at affiliated hospitals for patient recruitment and sample collection.</p>
+                    </div>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="interest-text">
+                        <h3>Laboratory Infrastructure</h3>
+                        <p>State-of-the-art wet lab facilities including flow cytometry, cell culture, and molecular biology equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section class="card">
+            <div class="section-header">
+                <i class="fas fa-handshake"></i>
+                <h2>Get Involved</h2>
+            </div>
+            
+            <p>I'm always looking for motivated collaborators, mentees, and research volunteers. If you're interested in my research areas or would like to discuss potential projects, please don't hesitate to reach out.</p>
+            
+            <div class="button-group">
+                <a href="contact.html" class="primary-btn">Contact Me</a>
+
+                <!-- NEED TO ADD CV OR ADD A ALT -->
+                <a href="#" class="secondary-btn">View CV</a>
+            </div>
+        </section>
     </div>
-  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:alex.smith@tcu.edu" class="footer-link swing">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://linkedin.com/in/alexsmith" class="footer-link swing">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://researchgate.net/profile/alex-smith" class="footer-link swing">
+                <i class="fab fa-researchgate"></i> ResearchGate
+            </a>
+            <a href="https://github.com/alexsmith-med" class="footer-link swing">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
