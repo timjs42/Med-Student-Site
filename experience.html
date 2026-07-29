@@ -23,6 +23,7 @@
         <li><a href="/experience.html" class="active">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html">Research</a></li>
+        <li><a href="/press.html">Press</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
@@ -272,26 +273,24 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <a href="mailto:medstudent@example.com" class="footer-link swing">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://linkedin.com/" class="footer-link swing">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://twitter.com/" class="footer-link swing">
-                <i class="fab fa-twitter"></i> Twitter
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+                <i class="fas fa-book-medical"></i> PubMed
             </a>
-            <a href="tel:+11234567890" class="footer-link swing">
-                <i class="fas fa-phone"></i> Call
+            <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
+                <i class="fas fa-university"></i> TCU
             </a>
         </div>
+        <p>&copy; 2025 Angel Xu. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript for Mobile Navigation Menu -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
             
             menuToggle.addEventListener('click', function() {
                 navLinks.classList.toggle('active');

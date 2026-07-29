@@ -28,6 +28,7 @@
         <li><a href="/experience.html">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html">Research</a></li>
+        <li><a href="/press.html">Press</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
@@ -37,7 +38,7 @@
 <header class="hero-area">
   <div class="profile-container">
     <div class="profile-content">
-      <img src="/images/Angel_Sheu_Headshot.png" alt="Angel Xu Profile Photo" class="profile-img" />
+      <img src="/images/Angel_Sheu_Headshot.jpg" alt="Angel Xu Profile Photo" class="profile-img" />
       <div class="profile-text">
         <h1>Angel Xu</h1>
         <p class="tagline">Medical Student | Future Physician</p>
@@ -207,5 +208,32 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    // Mobile navigation toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+
+    // Contact form handler
+    // NOTE: this site has no backend, so this opens the visitor's email client
+    // with the message pre-filled. Update CONTACT_EMAIL below to your real address.
+    // For a form that submits without opening email (recommended long-term), wire this
+    // up to a service like Formspree or Netlify Forms instead.
+    const CONTACT_EMAIL = "angel.xu@example.com"; // TODO: replace with your real email
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>

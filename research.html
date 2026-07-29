@@ -13,14 +13,18 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <a href="index.html" class="logo" style="text-decoration: none;">ANGEL XU</a>
-      <ul class="nav-links">
+      <div class="nav-top">
+        <a href="index.html" class="logo" style="text-decoration: none;">ANGEL XU</a>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/resume.html">Resume</a></li>
         <li><a href="/experience.html">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html" class="active">Research</a></li>
+        <li><a href="/press.html">Press</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
@@ -425,25 +429,23 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <a href="mailto:alex.smith@tcu.edu" class="footer-link swing">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://linkedin.com/in/alexsmith" class="footer-link swing">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://researchgate.net/profile/alex-smith" class="footer-link swing">
-                <i class="fab fa-researchgate"></i> ResearchGate
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+                <i class="fas fa-book-medical"></i> PubMed
             </a>
-            <a href="https://github.com/alexsmith-med" class="footer-link swing">
-                <i class="fab fa-github"></i> GitHub
+            <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
+                <i class="fas fa-university"></i> TCU
             </a>
         </div>
+        <p>&copy; 2025 Angel Xu. All rights reserved.</p>
     </footer>
 
     <script>
         // Mobile Menu Toggle
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
         });
     </script>
 </body>

@@ -24,6 +24,7 @@
         <li><a href="/experience.html">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html">Research</a></li>
+        <li><a href="/press.html">Press</a></li>
         <li><a href="/contact.html" class="active">Contact</a></li>
       </ul>
     </div>
@@ -82,29 +83,13 @@
                     </div>
                 </div>
                 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="primary-btn">Send Message</button>
-                </form>
+                <div class="linkedin-card">
+                <img src="/images/Angel_Sheu_Headshot.jpg" alt="Angel Xu" class="profile-img">
+                <p></p>
+                <a href="https://www.linkedin.com/in/angel-sheu-577776160/" target="_blank" class="primary-btn">
+                    <i class="fab fa-linkedin"></i> View LinkedIn Profile
+                </a>
+                </div>
             </div>
         </div>
         
@@ -117,7 +102,7 @@
             <div class="map-container">
                 <div class="responsive-map">
                     <!-- Placeholder for map iframe -->
-                    <img src="/images/tcuBurnett.png" alt="Map location" class="map-placeholder">
+                    <img src="/images/tcuBurnett.jpg" alt="Map location" class="map-placeholder">
                 </div>
                 <div class="map-info">
                     <p>The TCU School of Medicine is located in the heart of Fort Worth's medical district, right next to major hospital systems and research facilities.</p>
@@ -220,17 +205,14 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <a href="mailto:angel.xu@tcu.edu" class="footer-link swing">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="#" class="footer-link swing">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="#" class="footer-link swing">
-                <i class="fab fa-twitter"></i> Twitter
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+                <i class="fas fa-book-medical"></i> PubMed
             </a>
-            <a href="#" class="footer-link swing">
-                <i class="fas fa-phone"></i> (817) 555-1234
+            <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
+                <i class="fas fa-university"></i> TCU
             </a>
         </div>
         <p>&copy; 2025 Angel Xu. All rights reserved.</p>
@@ -238,8 +220,8 @@
 
     <script>
         // Mobile menu toggle
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
         });
 
         // FAQ toggle
