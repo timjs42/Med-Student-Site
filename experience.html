@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Medical Student Portfolio</title>
+    <title>Clinical Experience | Angel Sheu</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:title" content="Clinical Experience | Angel Sheu">
+    <meta property="og:description" content="Clinical rotations, research, and patient care experience.">
+    <meta property="og:image" content="images/Angel_Sheu_Headshot.jpg">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -13,13 +18,18 @@
   <nav>
     <div class="nav-container">
       <div class="nav-top">
-        <a href="index.html" class="logo">ANGEL XU</a>
+        <div class="nav-brand">
+          <a href="index.html" class="logo">ANGEL SHEU</a>
+          <a href="landing.html" class="landing-link" aria-label="Back to landing page">
+            <i class="fas fa-star"></i><span>Intro</span>
+          </a>
+        </div>
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="/resume.html">Resume</a></li>
+        <li><a href="/cv.html">CV</a></li>
         <li><a href="/experience.html" class="active">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html">Research</a></li>
@@ -53,74 +63,95 @@
             </div>
         </div>
 
-        <!-- Hospital Experience Section -->
+        <!-- Reflections Section -->
         <div class="card">
             <div class="section-header">
-                <i class="fas fa-hospital"></i>
-                <h2>Hospital Rotations</h2>
+                <i class="fas fa-quote-left"></i>
+                <h2>In Her Own Words</h2>
             </div>
-            <ul class="timeline-list">
-                <li>
-                    <strong>Internal Medicine Rotation</strong>
-                    <em>Texas Health Harris Methodist Hospital | Fort Worth, TX | June 2024 - Present</em>
-                    <p>Shadowed attending physicians during patient rounds and participated in case discussions. Observed diagnostic procedures and gained experience in interpreting lab results and developing treatment plans for complex cases.</p>
-                </li>
-                <li>
-                    <strong>Emergency Medicine Clerkship</strong>
-                    <em>TCU Medical Center | Fort Worth, TX | Jan 2024 - May 2024</em>
-                    <p>Assisted with triage assessments and patient intake. Observed procedures including suturing, fracture management, and emergency resuscitation protocols. Developed rapid diagnostic skills in a high-pressure environment.</p>
-                </li>
-                <li>
-                    <strong>Pediatrics Rotation</strong>
-                    <em>Cook Children's Medical Center | Fort Worth, TX | Aug 2023 - Dec 2023</em>
-                    <p>Participated in well-child visits and acute care. Learned age-specific assessment techniques and gained experience in communicating with young patients and their families. Observed specialized pediatric procedures.</p>
-                </li>
-            </ul>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-truck-medical"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>From the Ambulance to the Classroom</h3>
+                        <p>Reflecting on her paramedic years, she's described wanting to extend her impact past the few minutes she'd get with any one patient in the field — training peers so more people know how to respond to an overdose. <em>— Burnett School of Medicine at TCU, 2024</em></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Why the Data Matters</h3>
+                        <p>"I'm absolutely sure that we're saving more lives than are reported." <em>— TCU Magazine, 2025</em></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rotate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Building Muscle Memory</h3>
+                        <p>On TCU's simulation training, she's described running the same high-stress scenario over and over until the response becomes automatic — so it holds up when the pressure is real. <em>— Fort Worth Magazine, 2025</em></p>
+                    </div>
+                </div>
+            </div>
         </div>
+        
 
         <!-- Two Column Layout for Clinic and Research Experience -->
         <div class="two-column">
             <!-- Clinical Experience -->
             <div class="card">
                 <div class="section-header">
-                    <i class="fas fa-user-md"></i>
+                    <i class="fas fa-user-doctor"></i>
                     <h2>Clinical Experience</h2>
                 </div>
                 <ul class="timeline-list">
                     <li>
-                        <strong>Family Medicine Preceptorship</strong>
-                        <em>Community Health Clinic | Dallas, TX | Mar 2023 - July 2023</em>
-                        <p>Assisted primary care physicians with patient visits and follow-ups. Conducted initial patient interviews and documented medical histories. Gained experience in preventive care and chronic disease management.</p>
+                        <strong>Paramedic</strong>
+                        <em>Event Medical Specialists | April 2019 - Present</em>
+                        <p>Provides prehospital emergency care in event and field settings, building on six years as an EMT and paramedic in Denver and Philadelphia, where she treated hundreds of patients for opioid overdoses before starting medical school.</p>
                     </li>
                     <li>
-                        <strong>Psychiatry Observership</strong>
-                        <em>Mental Health Institute | Arlington, TX | Nov 2022 - Feb 2023</em>
-                        <p>Shadowed psychiatrists during outpatient consultations. Observed therapeutic approaches for various mental health conditions. Developed understanding of psychiatric assessment and medication management.</p>
+                        <strong>Denver Health Paramedic School</strong>
+                        <em>Denver Health Hospital &amp; Authority | Denver, CO | 2020</em>
+                        <p>Completed paramedic training after several years as an EMT, going on to work as a paramedic for six years before medical school.</p>
                     </li>
                 </ul>
             </div>
 
-            <!-- Volunteer Experience -->
+            <!-- Leadership & Service -->
             <div class="card">
                 <div class="section-header">
-                    <i class="fas fa-hands-helping"></i>
-                    <h2>Volunteer Experience</h2>
+                    <i class="fas fa-handshake-angle"></i>
+                    <h2>Leadership &amp; Service</h2>
                 </div>
                 <ul class="timeline-list">
                     <li>
-                        <strong>Medical Mission Trip</strong>
-                        <em>Global Health Initiative | Rural Guatemala | Summer 2023</em>
-                        <p>Participated in a two-week medical mission providing basic healthcare services to underserved communities. Assisted with patient intake, vital signs assessment, and medication distribution.</p>
+                        <strong>President, Street Medicine Group</strong>
+                        <em>Burnett School of Medicine | June 2025 - Present</em>
+                        <p>Leads a student organization delivering care directly to individuals experiencing homelessness in Fort Worth, after serving as Board Member and Education Coordinator since June 2023.</p>
                     </li>
                     <li>
-                        <strong>COVID-19 Vaccination Clinic</strong>
-                        <em>TCU Community Outreach | Fort Worth, TX | Spring 2022</em>
-                        <p>Volunteered at community vaccination clinics, assisting with patient registration, education, and post-vaccination monitoring. Helped administer over 500 vaccines during weekend clinics.</p>
+                        <strong>Vice President & Mentorship Chair, American Women Surgeons Group</strong>
+                        <em>Burnett School of Medicine | June 2025 - Present</em>
+                        <p>Supports women pursuing surgical careers through mentorship and programming.</p>
                     </li>
                     <li>
-                        <strong>Free Health Screening Program</strong>
-                        <em>Student-Run Clinic | Fort Worth, TX | 2021 - 2022</em>
-                        <p>Participated in monthly health screenings offering blood pressure checks, glucose testing, and basic health education to underserved populations. Helped coordinate follow-up referrals for at-risk patients.</p>
+                        <strong>Mentor</strong>
+                        <em>American Medical Women's Association, Rising Doctors Association &amp; Underdocs Association | June 2023 - Present</em>
+                        <p>Mentors students across three organizations supporting women and underrepresented groups in medicine.</p>
+                    </li>
+                    <li>
+                        <strong>Volunteer &amp; Project Mentor</strong>
+                        <em>Action Wellness (Jan 2022 - Present) &amp; Girl Scouts of USA (Jan 2024 - Present)</em>
+                        <p>Ongoing community volunteer work alongside her medical training.</p>
                     </li>
                 </ul>
             </div>
@@ -135,130 +166,28 @@
             
             <div class="skills-section">
                 <h3>Patient Care</h3>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>History Taking</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 95%"></div>
-                    </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">History Taking</span>
+                    <span class="skill-tag">Patient Assessment</span>
+                    <span class="skill-tag">Patient Education</span>
+                    <span class="skill-tag">Opioid Overdose Response</span>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Physical Examination</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Patient Education</span>
-                        <span>92%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 92%"></div>
-                    </div>
-                </div>
-                
-                <h3>Technical Skills</h3>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Venipuncture</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>EKG Interpretation</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Suturing</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                
-                <h3>Interpersonal Skills</h3>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Patient Communication</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Interdisciplinary Collaboration</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Cultural Competency</span>
-                        <span>88%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="progress-fill" style="width: 88%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Reflections Section -->
-        <div class="card">
-            <div class="section-header">
-                <i class="fas fa-comment-medical"></i>
-                <h2>Clinical Reflections</h2>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>The Art of Listening</h3>
-                        <p>During my family medicine rotation, I learned that listening is perhaps the most underrated diagnostic tool. A patient's own narrative often contains critical clues to their diagnosis that might be missed in lab work or imaging. This experience reinforced my commitment to patient-centered care.</p>
-                    </div>
+                <h3>Technical Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">IV / IO Access</span>
+                    <span class="skill-tag">Airway Management</span>
+                    <span class="skill-tag">Cardiac Monitoring &amp; EKG</span>
+                    <span class="skill-tag">Naloxone Administration</span>
+                    <span class="skill-tag">Trauma Assessment</span>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Critical Moments in the ER</h3>
-                        <p>Witnessing the resuscitation of a cardiac arrest patient in the emergency department was a profound moment in my training. The coordinated effort of the healthcare team demonstrated the importance of clear communication and well-practiced protocols when minutes matter most.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Global Health Perspective</h3>
-                        <p>My medical mission to Guatemala opened my eyes to healthcare disparities and the importance of adaptability in resource-limited settings. This experience has inspired my interest in global health initiatives and finding innovative solutions to improve healthcare access.</p>
-                    </div>
+
+                <h3>Interpersonal Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Patient Communication</span>
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Mentorship</span>
+                    <span class="skill-tag">Interdisciplinary Collaboration</span>
                 </div>
             </div>
         </div>
@@ -273,29 +202,20 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
+            <a href="https://www.linkedin.com/in/angel-sheu-577776160/" target="_blank" aria-label="LinkedIn" class="footer-link swing">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Sheu+Angel" target="_blank" aria-label="PubMed" class="footer-link swing">
                 <i class="fas fa-book-medical"></i> PubMed
             </a>
             <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
-                <i class="fas fa-university"></i> TCU
+                <i class="fas fa-building-columns"></i> TCU
             </a>
         </div>
-        <p>&copy; 2025 Angel Xu. All rights reserved.</p>
+        <p>&copy; 2025 Angel Sheu. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript for Mobile Navigation Menu -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menu-toggle');
-            const navLinks = document.getElementById('nav-links');
-            
-            menuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>

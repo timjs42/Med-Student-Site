@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume | Medical Student Portfolio</title>
+    <title>CV | Angel Sheu</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:title" content="CV | Angel Sheu">
+    <meta property="og:description" content="CV of an MD Candidate at TCU School of Medicine.">
+    <meta property="og:image" content="images/Angel_Sheu_Headshot.jpg">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,13 +18,18 @@
   <nav>
     <div class="nav-container">
       <div class="nav-top">
-        <a href="index.html" class="logo" style="text-decoration: none;">ANGEL XU</a>
+        <div class="nav-brand">
+          <a href="index.html" class="logo" style="text-decoration: none;">ANGEL SHEU</a>
+          <a href="landing.html" class="landing-link" aria-label="Back to landing page">
+            <i class="fas fa-star"></i><span>Intro</span>
+          </a>
+        </div>
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="/resume.html" class="active">Resume</a></li>
+        <li><a href="/cv.html" class="active">CV</a></li>
         <li><a href="/experience.html">Experience</a></li>
         <li><a href="/education.html">Education</a></li>
         <li><a href="/research.html">Research</a></li>
@@ -32,21 +42,21 @@
     <!-- Page Header -->
     <div class="page-header">
         <div class="header-container">
-            <h1>My Professional Resume</h1>
+            <h1>My Curriculum Vitae</h1>
             <div class="breadcrumbs">
                 <a href="index.html">Home</a>
                 <i class="fas fa-chevron-right"></i>
-                Resume
+                CV
             </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- Resume Introduction -->
+        <!-- CV Introduction -->
         <div class="card">
             <div class="section-header">
-                <i class="fas fa-file-alt"></i>
-                <h2>Resume Overview</h2>
+                <i class="fas fa-file-lines"></i>
+                <h2>CV Overview</h2>
             </div>
             <div class="about-flex">
                 <div class="about-image">
@@ -57,35 +67,35 @@
                     </div>
                 </div>
                 <div class="about-bio">
-                    <p>My resume highlights my academic journey, clinical experience, research accomplishments, and leadership roles. I'm passionate about advancing medical knowledge and providing excellent patient care.</p>
-                    <p>Below you can view and download my complete resume. For more detailed information about specific projects or experiences, please navigate to the relevant sections of this portfolio.</p>
+                    <p>My CV covers my academic journey, clinical experience, research accomplishments, and leadership roles. I'm passionate about advancing medical knowledge and providing excellent patient care.</p>
+                    <p>Below you can view and download my complete CV as a PDF, or download the original Word document. For more detail on specific projects, navigate to the relevant sections of this portfolio.</p>
                     
                     <div class="quote">
                         "Dedicated to evidence-based medicine and continuous professional development to provide the best possible care to patients."
                     </div>
                     
                     <div class="profile-cta">
-                        <a href="#resume-viewer" class="primary-btn"><i class="fas fa-eye"></i> View Resume</a>
-                        <a href="resume.pdf" download class="secondary-btn"><i class="fas fa-download"></i> Download PDF</a>
+                        <a href="#cv-viewer" class="primary-btn"><i class="fas fa-eye"></i> View CV</a>
+                        <a href="CV%20(Angel%20Sheu).docx" download="CV (Angel Sheu).docx" class="secondary-btn"><i class="fas fa-download"></i> Download CV (.docx)</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Resume Viewer -->
-        <div class="card" id="resume-viewer">
+        <!-- CV Viewer -->
+        <div class="card" id="cv-viewer">
             <div class="section-header">
                 <i class="fas fa-file-pdf"></i>
-                <h2>Resume Preview</h2>
+                <h2>CV Preview</h2>
             </div>
             
             <div class="pdf-container">
-                <embed src="/resume.pdf" type="application/pdf" class="pdf-viewer">
-                <p class="pdf-fallback"><a href="resume.pdf" download class="download-btn"><i class="fas fa-download"></i> Download PDF</a></p>
+                <embed src="/CV%20(Angel%20Sheu).pdf" type="application/pdf" class="pdf-viewer">
+                <p class="pdf-fallback"><a href="CV%20(Angel%20Sheu).docx" download="CV (Angel Sheu).docx" class="download-btn"><i class="fas fa-download"></i> Download CV (.docx)</a></p>
             </div>
         </div>
 
-        <!-- Resume Highlights -->
+        <!-- CV Highlights -->
         <div class="two-column">
             <!-- Key Skills Section -->
             <div class="card">
@@ -95,55 +105,21 @@
                 </div>
                 <div class="skills-section">
                     <h3>Clinical Skills</h3>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Patient Assessment</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-fill" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Medical Documentation</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-fill" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Clinical Procedures</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-fill" style="width: 80%;"></div>
-                        </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Patient Assessment</span>
+                        <span class="skill-tag">Prehospital &amp; Emergency Care</span>
+                        <span class="skill-tag">Naloxone Administration</span>
+                        <span class="skill-tag">BLS / ACLS / PALS</span>
+                        <span class="skill-tag">Medical Documentation</span>
                     </div>
 
                     <h3>Research Skills</h3>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Data Analysis</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-fill" style="width: 88%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Scientific Writing</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-fill" style="width: 92%;"></div>
-                        </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Scientific Writing</span>
+                        <span class="skill-tag">Systematic Review &amp; Meta-Analysis</span>
+                        <span class="skill-tag">Retrospective Cohort Studies</span>
+                        <span class="skill-tag">Research Presentation</span>
                     </div>
                 </div>
             </div>
@@ -157,7 +133,7 @@
                 <div class="cert-items">
                     <div class="cert-item">
                         <div class="cert-icon">
-                            <i class="fas fa-heartbeat"></i>
+                            <i class="fas fa-heart-pulse"></i>
                         </div>
                         <div class="cert-content">
                             <h4>Basic Life Support (BLS)</h4>
@@ -207,7 +183,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-icon">
-                        <i class="fas fa-user-md"></i>
+                        <i class="fas fa-user-doctor"></i>
                     </div>
                     <div class="timeline-content">
                         <h3>Clinical Excellence</h3>
@@ -251,10 +227,10 @@
         <div class="contact-cta">
             <div class="cta-content">
                 <h2>Let's Connect</h2>
-                <p>Interested in discussing potential opportunities or collaboration? Feel free to reach out to me directly through my contact page or download my resume for more information.</p>
+                <p>Interested in discussing potential opportunities or collaboration? Feel free to reach out to me directly through my contact page or download my CV for more information.</p>
                 <div class="button-group">
                     <a href="contact.html" class="primary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
-                    <a href="resume.pdf" download class="secondary-btn"><i class="fas fa-download"></i> Download Resume</a>
+                    <a href="CV%20(Angel%20Sheu).docx" download="CV (Angel Sheu).docx" class="secondary-btn"><i class="fas fa-download"></i> Download CV</a>
                 </div>
             </div>
         </div>
@@ -262,64 +238,23 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Angel Xu</p>
+      <p>&copy; 2025 Angel Sheu</p>
       <div class="footer-content">
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="footer-link swing">
+        <a href="https://www.linkedin.com/in/angel-sheu-577776160/" target="_blank" aria-label="LinkedIn" class="footer-link swing">
           <i class="fab fa-linkedin"></i>
           <span>LinkedIn</span>
         </a>
-        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelxu" target="_blank" aria-label="PubMed" class="footer-link swing">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Sheu+Angel" target="_blank" aria-label="PubMed" class="footer-link swing">
           <i class="fas fa-book-medical"></i>
           <span>PubMed</span>
         </a>
         <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
-          <i class="fas fa-university"></i>
+          <i class="fas fa-building-columns"></i>
           <span>TCU</span>
         </a>
       </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('nav-links').classList.toggle('active');
-        });
-
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add animation to PDF viewer on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const resumeViewer = document.getElementById('resume-viewer');
-            
-            function animateOnScroll() {
-                const viewerPosition = resumeViewer.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight;
-                
-                if(viewerPosition < screenPosition - 100) {
-                    resumeViewer.style.opacity = '1';
-                    resumeViewer.style.transform = 'translateY(0)';
-                }
-            }
-            
-            // Initial styling for animation
-            resumeViewer.style.opacity = '0';
-            resumeViewer.style.transform = 'translateY(30px)';
-            resumeViewer.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            
-            // Check position on scroll
-            window.addEventListener('scroll', animateOnScroll);
-            
-            // Check position on load
-            animateOnScroll();
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
