@@ -1,253 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Angel Sheu | Medical Student</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta property="og:title" content="Angel Sheu | MD Candidate, TCU School of Medicine">
-  <meta property="og:description" content="Clinical experience, research, and education — the portfolio of a future physician at TCU School of Medicine.">
-  <meta property="og:image" content="images/Angel_Sheu_Headshot.jpg">
-  <meta property="og:type" content="website">
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Sheu | MD Candidate, TCU School of Medicine</title>
+    <meta name="description" content="Angel Sheu — MD Candidate at TCU School of Medicine. Clinical research, patient care, and media coverage.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:title" content="Angel Sheu | MD Candidate, TCU School of Medicine">
+    <meta property="og:description" content="Featured in the news. Trained for the clinic. Explore the full portfolio.">
+    <meta property="og:image" content="images/Angel_Sheu_Headshot.jpg">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <div class="nav-top">
-        <div class="nav-brand">
-          <a href="index.html" class="logo">ANGEL SHEU</a>
-          <a href="landing.html" class="landing-link" aria-label="Back to landing page">
-            <i class="fas fa-star"></i><span>Intro</span>
-          </a>
-        </div>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="/index.html" class="active">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/cv.html">CV</a></li>
-        <li><a href="/experience.html">Experience</a></li>
-        <li><a href="/education.html">Education</a></li>
-        <li><a href="/research.html">Research</a></li>
-        <li><a href="/press.html">Press</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-<!-- Hero Area using header tag instead of section -->
-<header class="hero-area">
-  <div class="profile-container">
-    <svg class="ekg-line" viewBox="0 0 340 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M0,17 L110,17 L124,3 L138,31 L152,17 L340,17" />
-    </svg>
-    <div class="profile-content">
-      <img src="/images/Angel_Sheu_Headshot.jpg" alt="Angel Sheu Profile Photo" class="profile-img" />
-      <div class="profile-text">
-        <span class="eyebrow" style="color: var(--buff);">MD Candidate, Class of 2026</span>
-        <h1>Angel Sheu</h1>
-        <p class="tagline">TCU School of Medicine · Future Physician</p>
-        <div class="profile-cta">
-          <a href="#contact" class="primary-btn">Contact Me</a>
-          <a href="/cv.html" class="secondary-btn" style="border-color: rgba(255,255,255,0.5); color: #fff !important;">View CV</a>
-        </div>
-      </div>
+    <!-- Minimal cinematic nav -->
+    <div class="landing-nav">
+        <a href="home.html" class="logo">ANGEL SHEU</a>
+        <a href="home.html" class="skip-link">Skip to Full Portfolio</a>
     </div>
-    <div class="hero-badges">
-      <span class="badge"><i class="fas fa-truck-medical"></i> EMS &amp; Prehospital Care</span>
-      <span class="badge"><i class="fas fa-microscope"></i> Clinical Research</span>
-      <span class="badge"><i class="fas fa-hand-holding-heart"></i> Street Medicine</span>
-    </div>
-  </div>
-</header>
 
-  <!-- Main Content -->
-  <main>
-    <div class="container">
-    <section id="about" class="card">
-      <div class="section-header">
-        <i class="fas fa-user-doctor"></i>
-        <h2>About Me</h2>
-      </div>
-      <p>
-        I'm a medical student at TCU's Burnett School of Medicine with a background as a paramedic —
-        before starting medical school, I treated hundreds of patients for opioid overdoses in Denver and Philadelphia.
-        That experience now drives my research and community work around naloxone access and prehospital care.
-      </p>
+    <!-- Hero -->
+    <header class="landing-hero">
+        <div class="landing-hero-inner">
+            <span class="eyebrow">MD Candidate &middot; TCU School of Medicine</span>
+            <h1>Angel Sheu</h1>
+            <p class="landing-sub">
+                Paramedic-turned-medical-student focused on prehospital care and opioid overdose research —
+                as featured in the news, publications, and press below.
+            </p>
+            <div class="profile-cta">
+                <a href="#featured" class="primary-btn">See the Coverage</a>
+                <a href="home.html" class="secondary-btn" style="border-color: rgba(255,255,255,0.5); color: #fff !important;">Enter the Portfolio</a>
+            </div>
+        </div>
+        <div class="scroll-cue">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Featured Press / Media -->
+    <section id="featured" class="media-section">
+        <div class="media-section-header">
+            <span class="eyebrow">In the Spotlight</span>
+            <h2>Featured Coverage</h2>
+            <p>
+                News features and video coverage of her naloxone research and medical school journey.
+            </p>
+        </div>
+
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="media-thumb">
+                    <span class="media-type-badge">Article</span>
+                    <i class="fas fa-newspaper placeholder-icon"></i>
+                </div>
+                <div class="media-card-content">
+                    <span class="media-outlet">TCU 360</span>
+                    <h3>Closing the Spanish Language Gap in Fort Worth</h3>
+                    <p class="media-date">June 2026</p>
+                    <p>An interactive feature on TCU medical students working to reduce the Spanish-language gap in patient care.</p>
+                    <a href="https://tcu360.com/2026/06/20/closing-the-spanish-language-gap-in-fort-worth/" target="_blank" class="media-link">Read the article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-thumb">
+                    <span class="media-type-badge">Article</span>
+                    <i class="fas fa-newspaper placeholder-icon"></i>
+                </div>
+                <div class="media-card-content">
+                    <span class="media-outlet">Fort Worth Magazine</span>
+                    <h3>TCU's Burnett Med School Uses Cutting-Edge Simulation</h3>
+                    <p class="media-date">August 2025</p>
+                    <p>A look inside Burnett's simulation curriculum, featuring her take on how repeated practice builds clinical muscle memory.</p>
+                    <a href="https://fwtx.com/news/tcu-med-school-transforms-training/" target="_blank" class="media-link">Read the article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-thumb">
+                    <span class="media-type-badge">Article</span>
+                    <i class="fas fa-newspaper placeholder-icon"></i>
+                </div>
+                <div class="media-card-content">
+                    <span class="media-outlet">TCU Magazine</span>
+                    <h3>Tech to the Rescue</h3>
+                    <p class="media-date">Spring 2025</p>
+                    <p>How her QR-code naloxone tracking system, built with Drew's 27 Chains, could help cut opioid overdose deaths.</p>
+                    <a href="https://magazine.tcu.edu/spring-2025/naloxone-qr-code-medical-technology/" target="_blank" class="media-link">Read the article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-thumb">
+                    <span class="media-type-badge">Article</span>
+                    <i class="fas fa-newspaper placeholder-icon"></i>
+                </div>
+                <div class="media-card-content">
+                    <span class="media-outlet">Burnett School of Medicine at TCU</span>
+                    <h3>Narcan Project Provides Essential Data</h3>
+                    <p class="media-date">November 2024</p>
+                    <p>On her four-year thesis project, rooted in her years as a paramedic treating opioid overdoses in Denver and Philadelphia.</p>
+                    <a href="https://mdschool.tcu.edu/news-item/burnett-school-of-medicine-students-narcan-project-provides-essential-data/" target="_blank" class="media-link">Read the article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-thumb">
+                    <span class="media-type-badge">Video</span>
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="media-card-content">
+                    <span class="media-outlet">NBC 5 DFW</span>
+                    <h3>Medical Students Learn Life-Saving Skills From Mother Who Lost Son to Opioid Overdose</h3>
+                    <p class="media-date">February 2024</p>
+                    <p>TV coverage of the naloxone training and QR-code project developed with Callie Crow of Drew's 27 Chains.</p>
+                    <a href="https://www.nbcdfw.com/news/health/fort-worth-medical-students-learn-life-saving-skills-from-mother-who-lost-son-to-opioid-overdose/3457646/" target="_blank" class="media-link">Watch the segment <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="cv" class="card">
-      <div class="section-header">
-        <i class="fas fa-file-medical"></i>
-        <h2>CV</h2>
-      </div>
-      <a class="download-btn" href="CV%20(Angel%20Sheu).docx" download="CV (Angel Sheu).docx">
-        <span class="download-text"><i class="fas fa-download"></i> Download CV</span>
-      </a>
-      <div class="pdf-viewer">
-        <iframe src="CV%20(Angel%20Sheu).pdf#toolbar=0" width="100%" height="100%" frameborder="0"></iframe>
-      </div>
+    <!-- CTA into the rest of the site -->
+    <section class="landing-cta-section">
+        <h2>There's more to explore</h2>
+        <p>Clinical experience, education, research, and the full CV — all one click away.</p>
+        <a href="home.html" class="primary-btn">Enter the Full Portfolio <i class="fas fa-arrow-right"></i></a>
     </section>
 
-
-<!-- Experience Section with improved format -->
-<section id="experience" class="card">
-  <div class="section-header">
-    <i class="fas fa-stethoscope"></i>
-    <h2>Clinical Experience</h2>
-  </div>
-  <ul class="timeline-list">
-    <li>
-      <strong>Paramedic</strong>
-      <em>Event Medical Specialists | April 2019–Present</em>
-      <p>Provides prehospital emergency care, including response to opioid overdoses, across event and field settings.</p>
-    </li>
-    <li>
-      <strong>President, Street Medicine Group</strong>
-      <em>Burnett School of Medicine | June 2025–Present</em>
-      <p>Leads a student organization delivering care directly to individuals experiencing homelessness in Fort Worth, after serving as Board Member and Education Coordinator since 2023.</p>
-    </li>
-    <li>
-      <strong>Paramedic (EMT to Paramedic)</strong>
-      <em>Denver, CO &amp; Philadelphia, PA | 2019–2023</em>
-      <p>Treated hundreds of patients for opioid overdoses as a first responder before starting medical school — the experience that shaped her naloxone research.</p>
-    </li>
-  </ul>
-</section>
-
-<!-- Education Section with improved format -->
-<section id="education" class="card">
-  <div class="section-header">
-    <i class="fas fa-graduation-cap"></i>
-    <h2>Education</h2>
-  </div>
-  <ul class="timeline-list">
-    <li>
-      <strong>Doctor of Medicine (MD)</strong>
-      <em>Anne Burnett Marion School of Medicine at TCU | Expected May 2027</em>
-      <p>Four-year Scholarly Pursuit and Thesis project on naloxone training and opioid overdose response.</p>
-    </li>
-    <li>
-      <strong>Post-Baccalaureate in Pre-Health</strong>
-      <em>University of Pennsylvania | 2022</em>
-      <p>Recipient of the Pre-Health Specialized Studies Award.</p>
-    </li>
-    <li>
-      <strong>Bachelor of Science in Biochemistry</strong>
-      <em>University of Denver | 2019</em>
-      <p>Minors in Mathematics, Chemistry, and Biological Sciences.</p>
-    </li>
-  </ul>
-</section>
-
-<!-- Research Section with improved format -->
-<section id="research" class="card">
-  <div class="section-header">
-    <i class="fas fa-microscope"></i>
-    <h2>Research & Publications</h2>
-  </div>
-  <ul class="timeline-list">
-    <li>
-      <strong>Peer-Reviewed Publication</strong>
-      <em>AJE Advances: Research in Epidemiology | 2026</em>
-      <p><strong>Sheu A</strong>, Bourmand R, DiFiore E. "Monitoring longitudinal public interest in opioid risk and response: fentanyl vs. Narcan vs. naloxone — public search patterns." doi:10.1093/ajeadv/uuag005</p>
-    </li>
-    <li>
-      <strong>First Place, Oral Presentation</strong>
-      <em>F1 Doctors Research Symposium | 2025</em>
-      <p><strong>Sheu A</strong>, Bourmand R. "Robot-assisted versus freehand pedicle screw placement in lumbar spinal fusion: A systematic review and meta-analysis."</p>
-    </li>
-    <li>
-      <strong>Peer-Reviewed Publication</strong>
-      <em>Diagnostics, 16(7) | 2026</em>
-      <p>Soogoor N, ... <strong>Sheu A</strong>, et al. "Post-Operative Outcomes of Groin Hernia Repairs in Women: A Contemporary Review."</p>
-    </li>
-  </ul>
-</section>
-
-<!-- Contact Section with Improved Icon Placement -->
-<section id="contact" class="card">
-  <div class="section-header">
-    <i class="fas fa-comment-dots"></i>
-    <h2>Get In Touch</h2>
-  </div>
-  <div class="contact-container">
-    <div class="contact-info">
-      <div class="contact-item">
-        <div class="contact-header">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Angel Sheu</p>
+        <div class="footer-content">
+            <a href="https://www.linkedin.com/in/angel-sheu-577776160/" target="_blank" aria-label="LinkedIn" class="footer-link swing">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Sheu+Angel" target="_blank" aria-label="PubMed" class="footer-link swing">
+                <i class="fas fa-book-medical"></i>
+                <span>PubMed</span>
+            </a>
+            <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
+                <i class="fas fa-building-columns"></i>
+                <span>TCU</span>
+            </a>
         </div>
-        <p><a href="mailto:Angel.Sheu@tcu.edu">Angel.Sheu@tcu.edu</a></p>
-      </div>
-      <div class="contact-item">
-        <div class="contact-header">
-          <i class="fab fa-linkedin"></i>
-          <h3>LinkedIn</h3>
-        </div>
-        <p><a href="https://www.linkedin.com/in/angel-sheu-577776160/" target="_blank">linkedin.com/in/angel-sheu</a></p>
-      </div>
-      <div class="contact-item">
-        <div class="contact-header">
-          <i class="fas fa-building-columns"></i>
-          <h3>School</h3>
-        </div>
-        <p>TCU School of Medicine</p>
-      </div>
-    </div>
-    
-    <div class="contact-form">
-      <form id="contactForm">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="primary-btn">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
+    </footer>
 
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Angel Sheu</p>
-    <div class="footer-content">
-      <!-- Update with actual profile links -->
-      <a href="https://www.linkedin.com/in/angel-sheu-577776160/" target="_blank" aria-label="LinkedIn" class="footer-link swing">
-        <i class="fab fa-linkedin"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Sheu+Angel" target="_blank" aria-label="PubMed" class="footer-link swing">
-        <i class="fas fa-book-medical"></i>
-        <span>PubMed</span>
-      </a>
-      <a href="https://www.tcu.edu/" target="_blank" aria-label="TCU" class="footer-link swing">
-        <i class="fas fa-building-columns"></i>
-        <span>TCU</span>
-      </a>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
