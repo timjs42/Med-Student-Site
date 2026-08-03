@@ -1342,7 +1342,16 @@ footer p { font-size: 0.85rem; margin-bottom: 1rem; }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+.media-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-thumb .play-btn { position: relative; z-index: 1; }
 .media-thumb i.placeholder-icon { font-size: 2.2rem; color: var(--purple); opacity: 0.35; }
 .media-thumb .play-btn {
   width: 56px; height: 56px;
@@ -1406,9 +1415,9 @@ footer p { font-size: 0.85rem; margin-bottom: 1rem; }
 }
 
 @media (max-width: 640px) {
-  .landing-hero { min-height: auto; padding: 6.5rem 1.2rem 4rem; }
+  .landing-hero { min-height: auto; padding: 6.5rem 1.2rem 6.5rem; }
   .landing-nav { padding: 1.2rem; }
-  .landing-stats { gap: 1.4rem; flex-wrap: wrap; }
+  .landing-stats { gap: 1.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
   .as-featured-outlets { gap: 0.4rem 1.1rem; }
   .as-featured-outlets span { font-size: 0.88rem; }
 }
@@ -1534,6 +1543,10 @@ button[type="submit"]:active { transform: scale(0.97); }
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+@keyframes fade-up-centered {
+  from { opacity: 0; transform: translateX(-50%) translateY(18px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
 @keyframes fade-scale-in {
   from { opacity: 0; transform: scale(0.92); }
   to   { opacity: 1; transform: scale(1); }
@@ -1558,7 +1571,7 @@ button[type="submit"]:active { transform: scale(0.97); }
   opacity: 0;
   animation: fade-scale-in 0.9s var(--ease) 0.25s forwards;
 }
-.scroll-cue { opacity: 0; animation: fade-up 0.8s var(--ease) 1.3s forwards; }
+.scroll-cue { opacity: 0; animation: fade-up-centered 0.8s var(--ease) 1.3s forwards; }
 
 /* ---- Cascading reveal for list-style children, once the parent card is visible ---- */
 .timeline-list li, .timeline-item, .cert-items .cert-item,
