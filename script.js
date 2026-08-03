@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // the message pre-filled. Update CONTACT_EMAIL to the real address.
   // For a form that submits without opening email, wire this to a service
   // like Formspree or Netlify Forms instead.
-  const CONTACT_EMAIL = 'temp placeholder';
+  const CONTACT_EMAIL = 'angel.med1@outlook.com';
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
