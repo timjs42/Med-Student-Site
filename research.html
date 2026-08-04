@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | Angel Sheu</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta property="og:title" content="Research & Publications | Angel Sheu">
     <meta property="og:description" content="Clinical research, publications, and academic projects.">
     <meta property="og:image" content="images/Angel_Sheu_Headshot.jpg">
@@ -14,6 +17,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-to-content">Skip to content</a>
     <!-- Navigation -->
   <!-- Navigation -->
   <nav>
@@ -25,7 +29,7 @@
             <i class="fas fa-star"></i><span>Intro</span>
           </a>
         </div>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="menu-toggle" id="menu-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</div>
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="/home.html">Home</a></li>
@@ -39,7 +43,7 @@
       </ul>
     </div>
   </nav>
-
+<main id="main-content">
     <!-- Page Header -->
     <header class="page-header">
         <div class="header-container">
@@ -61,15 +65,15 @@
             <p>As a medical student at TCU's Burnett School of Medicine and a former paramedic, my research centers on opioid overdose response and naloxone access, alongside a broad range of clinical and surgical outcomes research with collaborators across several institutions.</p>
 
             <div class="stats-container">
-                <div class="stat-item">
+                <div class="stat-item" role="button" tabindex="0" aria-haspopup="dialog" data-modal="publications-modal">
                     <div class="stat-value"><i class="fas fa-file-lines"></i> 4</div>
                     <div class="stat-label">Publications</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" role="button" tabindex="0" aria-haspopup="dialog" data-modal="presentations-modal">
                     <div class="stat-value"><i class="fas fa-chalkboard-user"></i> 25+</div>
                     <div class="stat-label">Presentations</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" role="button" tabindex="0" aria-haspopup="dialog" data-modal="honors-modal">
                     <div class="stat-value"><i class="fas fa-award"></i> 13</div>
                     <div class="stat-label">Honors &amp; Awards</div>
                 </div>
@@ -389,7 +393,7 @@
             </div>
         </section>
     </div>
-
+</main>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -403,8 +407,102 @@
                 <i class="fas fa-building-columns"></i> TCU
             </a>
         </div>
-        <p>&copy; 2025 Angel Sheu. All rights reserved.</p>
+        <p>&copy; 2026 Angel Sheu. All rights reserved.</p>
     </footer>
+
+  <!-- Stat Detail Modals -->
+  <div class="stat-modal-overlay" id="publications-modal" hidden>
+    <div class="stat-modal" role="dialog" aria-modal="true" aria-labelledby="publications-modal-title">
+      <div class="stat-modal-header">
+        <h3 id="publications-modal-title"><i class="fas fa-file-lines"></i> Publications</h3>
+        <button class="stat-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <ul class="stat-modal-list">
+        <li>
+          <strong>Sheu A, Bourmand R, DiFiore E. (2026)</strong>
+          <span class="modal-item-venue">AJE Advances: Research in Epidemiology</span>
+          <p>"Monitoring longitudinal public interest in opioid risk and response: fentanyl vs. Narcan vs. naloxone — public search patterns." doi:10.1093/ajeadv/uuag005</p>
+        </li>
+        <li>
+          <strong>Soogoor N, Shiroya S, et al. (2026)</strong>
+          <span class="modal-item-venue">Diagnostics, 16(7), 973</span>
+          <p>"Post-Operative Outcomes of Groin Hernia Repairs in Women: A Contemporary Review."</p>
+        </li>
+        <li>
+          <strong>Morales J, Jackson S, et al.</strong>
+          <span class="modal-item-venue">Clinical Dermatology and Surgery</span>
+          <p>"The Importance of Dermatological Detection of Xanthomas and Xanthelasmas in Pediatric Patients: A Summary of Case Reports."</p>
+        </li>
+        <li>
+          <strong>Morales J, Jackson S, et al.</strong>
+          <span class="modal-item-venue">JAAD Reviews</span>
+          <p>"The Importance of Dermatological Detection of Xanthomas and Xanthelasmas in Pediatric Patients: A Literature Review." doi:10.1016/j.jdrv.2025.03.010</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stat-modal-overlay" id="presentations-modal" hidden>
+    <div class="stat-modal" role="dialog" aria-modal="true" aria-labelledby="presentations-modal-title">
+      <div class="stat-modal-header">
+        <h3 id="presentations-modal-title"><i class="fas fa-chalkboard-user"></i> Presentations</h3>
+        <button class="stat-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <ul class="stat-modal-list">
+        <li><strong>Overdose Fatality Review Trends</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2026</span></li>
+        <li><strong>Health Effects of Smoke Exposure in Wildland Firefighters</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2026</span></li>
+        <li><strong>Post-ROSC Care Outcomes</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2026</span></li>
+        <li><strong>Specialty Care Access</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2026</span></li>
+        <li><strong>Internet-Associated Psychotic Disorder</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2026</span></li>
+        <li><strong>Evaluating TikTok Health Advice</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2026</span></li>
+        <li><strong>Robot-Assisted vs. Freehand Pedicle Screw Placement in Lumbar Spinal Fusion</strong><span class="modal-item-venue">F1 Doctors Research Symposium | 2025 — 1st Place, Oral Presentation</span></li>
+        <li><strong>Septoplasty on TikTok: Evaluating User-Generated Content</strong><span class="modal-item-venue">Western Surgical Association Annual Meeting | 2025</span></li>
+        <li><strong>Research Presentation</strong><span class="modal-item-venue">RMEC Research Symposium | 2025</span></li>
+        <li><strong>Prehospital Care Research</strong><span class="modal-item-venue">UCLA Prehospital Care Research Forum | 2025</span></li>
+        <li><strong>Naloxone Search Patterns Research</strong><span class="modal-item-venue">AMA Research Challenge | 2025</span></li>
+        <li><strong>Research Presentation</strong><span class="modal-item-venue">Inaugural CARE Conference | 2025</span></li>
+        <li><strong>Quality-of-Life Framework: Maslow's Hierarchy</strong><span class="modal-item-venue">ISOQOL 32nd Annual Conference | 2025</span></li>
+        <li><strong>Quality-of-Life Framework: Bronfenbrenner's Ecological Systems Theory</strong><span class="modal-item-venue">ISOQOL 32nd Annual Conference | 2025</span></li>
+        <li><strong>Quality-of-Life Discounting in Chronic Illness</strong><span class="modal-item-venue">ISOQOL 32nd Annual Conference | 2025</span></li>
+        <li><strong>Exploring Electrodermal Activity as a Non-Invasive Marker of Sedation Depth</strong><span class="modal-item-venue">Texas Society of Anesthesiologists Annual Meeting | 2025 — 3rd Place, Novel Research</span></li>
+        <li><strong>Medicare Reimbursement Trends in Cardiac Surgical Care</strong><span class="modal-item-venue">ACS Quality and Safety Conference | 2025</span></li>
+        <li><strong>Medicare Reimbursement Trends in Vascular Surgical Care</strong><span class="modal-item-venue">ACS Quality and Safety Conference | 2025</span></li>
+        <li><strong>Monitoring Public Interest in Opioid Risk and Response</strong><span class="modal-item-venue">American Medical Association Annual Meeting | 2025</span></li>
+        <li><strong>Immunosuppression, Relapse &amp; Steroid Burden in GCA and PMR</strong><span class="modal-item-venue">American College of Rheumatology | 2025</span></li>
+        <li><strong>Research Presentation</strong><span class="modal-item-venue">National Student Research Forum, UTMB | 2025</span></li>
+        <li><strong>Post-Operative Outcomes of Groin Hernia Repairs in Women</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2025</span></li>
+        <li><strong>Metformin Use and Outcomes</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2025</span></li>
+        <li><strong>Dermatological Detection of Xanthomas &amp; Xanthelasmas: Case Reports</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2025</span></li>
+        <li><strong>Dermatological Detection of Xanthomas &amp; Xanthelasmas: Literature Review</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2025</span></li>
+        <li><strong>Research Presentation</strong><span class="modal-item-venue">John Peter Smith Research Symposium | 2024</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stat-modal-overlay" id="honors-modal" hidden>
+    <div class="stat-modal" role="dialog" aria-modal="true" aria-labelledby="honors-modal-title">
+      <div class="stat-modal-header">
+        <h3 id="honors-modal-title"><i class="fas fa-award"></i> Honors &amp; Awards</h3>
+        <button class="stat-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <ul class="stat-modal-list">
+        <li><strong>Novel Research Award</strong><span class="modal-item-venue">Texas Society of Anesthesiologists Annual Meeting | 2025</span></li>
+        <li><strong>First Place, Oral Presentation</strong><span class="modal-item-venue">F1 Doctors Research Symposium | 2025</span></li>
+        <li><strong>Pillar of University Leadership Award</strong><span class="modal-item-venue">Texas Christian University</span></li>
+        <li><strong>Service Legacy Award Nominee</strong><span class="modal-item-venue">Texas Christian University</span></li>
+        <li><strong>Microbiology Cup Award</strong><span class="modal-item-venue">Burnett School of Medicine | 2024</span></li>
+        <li><strong>Pulmonary Medals Game Award</strong><span class="modal-item-venue">Burnett School of Medicine | 2024</span></li>
+        <li><strong>Neurology Medals Game Award</strong><span class="modal-item-venue">Burnett School of Medicine | 2024</span></li>
+        <li><strong>Medical Education Solutions Hackathon Award</strong><span class="modal-item-venue">Innovation in Medicine Group, Burnett School of Medicine | 2024</span></li>
+        <li><strong>Dr. Mary Edwards Walker Award for Service, Nominee</strong><span class="modal-item-venue">American Medical Women's Association | 2025</span></li>
+        <li><strong>Pre-Health Specialized Studies Award</strong><span class="modal-item-venue">University of Pennsylvania | 2022</span></li>
+        <li><strong>Denver Fund Boundless Opportunity Scholarship</strong><span class="modal-item-venue">Denver Health Hospital &amp; Authority | 2019</span></li>
+        <li><strong>Outstanding Student Award, Nominee</strong><span class="modal-item-venue">University of Denver | 2019</span></li>
+        <li><strong>Research Award</strong><span class="modal-item-venue">University of Denver, Department of Psychology | 2019</span></li>
+      </ul>
+    </div>
+  </div>
+
 
     <script src="script.js" defer></script>
 </body>

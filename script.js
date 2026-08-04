@@ -12,13 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('active');
+    const toggleMenu = function () {
+      const isOpen = navLinks.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
+    menuToggle.addEventListener('click', toggleMenu);
+    menuToggle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        toggleMenu();
+      }
     });
     // Close the menu after a link is tapped (mobile)
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -89,4 +98,41 @@ document.addEventListener('DOMContentLoaded', function () {
     // just show everything immediately.
     revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
   }
+
+  // ---- Stat detail modals (Publications / Presentations / Honors) ----
+  const statModalOpeners = document.querySelectorAll('[data-modal]');
+  const openStatModal = function (modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    const closeBtn = modal.querySelector('.stat-modal-close');
+    if (closeBtn) closeBtn.focus();
+  };
+  const closeStatModal = function (modal) {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  };
+  statModalOpeners.forEach(function (opener) {
+    const modal = document.getElementById(opener.getAttribute('data-modal'));
+    opener.addEventListener('click', function () { openStatModal(modal); });
+    opener.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        openStatModal(modal);
+      }
+    });
+  });
+  document.querySelectorAll('.stat-modal-overlay').forEach(function (overlay) {
+    const closeBtn = overlay.querySelector('.stat-modal-close');
+    if (closeBtn) closeBtn.addEventListener('click', function () { closeStatModal(overlay); });
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeStatModal(overlay);
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.stat-modal-overlay').forEach(function (overlay) {
+      if (!overlay.hidden) closeStatModal(overlay);
+    });
+  });
 });
