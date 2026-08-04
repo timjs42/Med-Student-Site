@@ -135,4 +135,155 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!overlay.hidden) closeStatModal(overlay);
     });
   });
+
+  // ---- Reading progress bar + back-to-top button ----
+  const progressBar = document.createElement('div');
+  progressBar.className = 'reading-progress';
+  document.body.appendChild(progressBar);
+
+  const backToTop = document.createElement('button');
+  backToTop.className = 'back-to-top';
+  backToTop.type = 'button';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+  document.body.appendChild(backToTop);
+
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+
+  let scrollTicking = false;
+  function updateScrollUI() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+    progressBar.style.width = progress + '%';
+    backToTop.classList.toggle('visible', scrollTop > 500);
+    scrollTicking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!scrollTicking) {
+      requestAnimationFrame(updateScrollUI);
+      scrollTicking = true;
+    }
+  }, { passive: true });
+  updateScrollUI();
+
+  // ---- Copy citation buttons ----
+  document.querySelectorAll('.copy-citation-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const citation = btn.getAttribute('data-citation') || '';
+      const showCopied = function () {
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.innerHTML = original;
+          btn.classList.remove('copied');
+        }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(citation).then(showCopied).catch(function () {});
+      } else {
+        // Fallback for browsers without the Clipboard API
+        const temp = document.createElement('textarea');
+        temp.value = citation;
+        temp.style.position = 'fixed';
+        temp.style.opacity = '0';
+        document.body.appendChild(temp);
+        temp.select();
+        try { document.execCommand('copy'); showCopied(); } catch (err) {}
+        document.body.removeChild(temp);
+      }
+    });
+  });
+
+  // ---- Photo lightbox for media card thumbnails ----
+  const lightboxTriggers = document.querySelectorAll('.media-thumb[data-lightbox-img]');
+  if (lightboxTriggers.length) {
+    const lbOverlay = document.createElement('div');
+    lbOverlay.className = 'photo-lightbox-overlay';
+    lbOverlay.hidden = true;
+    lbOverlay.innerHTML =
+      '<div class="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview">' +
+        '<button type="button" class="photo-lightbox-close" aria-label="Close">&times;</button>' +
+        '<img src="" alt="">' +
+        '<div class="photo-lightbox-content">' +
+          '<span class="media-outlet"></span>' +
+          '<h3></h3>' +
+          '<a href="#" target="_blank" class="media-link">Read the source <i class="fas fa-arrow-right"></i></a>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(lbOverlay);
+
+    const lbImg = lbOverlay.querySelector('img');
+    const lbOutlet = lbOverlay.querySelector('.media-outlet');
+    const lbTitle = lbOverlay.querySelector('h3');
+    const lbLink = lbOverlay.querySelector('.media-link');
+    const lbClose = lbOverlay.querySelector('.photo-lightbox-close');
+
+    const openLightbox = function (trigger) {
+      lbImg.src = trigger.getAttribute('data-lightbox-img');
+      lbImg.alt = trigger.getAttribute('data-lightbox-title') || '';
+      lbOutlet.textContent = trigger.getAttribute('data-lightbox-outlet') || '';
+      lbTitle.textContent = trigger.getAttribute('data-lightbox-title') || '';
+      lbLink.href = trigger.getAttribute('data-lightbox-link') || '#';
+      lbOverlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+      lbClose.focus();
+    };
+    const closeLightbox = function () {
+      lbOverlay.hidden = true;
+      document.body.style.overflow = '';
+    };
+
+    lightboxTriggers.forEach(function (trigger) {
+      trigger.setAttribute('tabindex', '0');
+      trigger.setAttribute('role', 'button');
+      trigger.setAttribute('aria-label', 'View larger photo: ' + (trigger.getAttribute('data-lightbox-title') || ''));
+      trigger.addEventListener('click', function () { openLightbox(trigger); });
+      trigger.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(trigger); }
+      });
+    });
+    lbClose.addEventListener('click', closeLightbox);
+    lbOverlay.addEventListener('click', function (e) { if (e.target === lbOverlay) closeLightbox(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lbOverlay.hidden) closeLightbox(); });
+  }
+
+  // ---- Dark mode toggle ----
+  const THEME_KEY = 'angelsheu-theme';
+  const root = document.documentElement;
+  const getStoredTheme = function () {
+    try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
+  };
+  const setStoredTheme = function (theme) {
+    try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+  };
+  const applyTheme = function (theme) {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      const nextAction = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('aria-label', nextAction);
+      btn.setAttribute('title', nextAction);
+    });
+  };
+
+  const stored = getStoredTheme();
+  // Light mode is always the default unless the visitor has explicitly chosen dark before.
+  applyTheme(stored === 'dark' ? 'dark' : 'light');
+
+  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      applyTheme(next);
+      setStoredTheme(next);
+    });
+  });
 });
