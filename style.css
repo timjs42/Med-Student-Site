@@ -1660,9 +1660,17 @@ footer p { font-size: 0.85rem; margin-bottom: 1rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(14px);
+  transform: scale(1.06);
+  opacity: 0;
+  transition: filter 0.6s var(--ease), transform 0.6s var(--ease), opacity 0.5s var(--ease);
+}
+.media-thumb img.loaded {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
 }
 .media-thumb .play-btn { position: relative; z-index: 1; }
-.media-thumb i.placeholder-icon { font-size: 2.2rem; color: var(--purple); opacity: 0.35; }
 .media-thumb .play-btn {
   width: 56px; height: 56px;
   border-radius: 50%;
@@ -1705,6 +1713,45 @@ footer p { font-size: 0.85rem; margin-bottom: 1rem; }
   font-size: 0.85rem;
   font-weight: 700;
 }
+
+.landing-pullquote {
+  background: linear-gradient(180deg, var(--paper), var(--purple-pale));
+  padding: 4.5rem 1.5rem;
+  text-align: center;
+}
+.landing-pullquote-inner { max-width: 680px; margin: 0 auto; }
+.landing-pullquote i.fa-quote-left {
+  font-size: 1.8rem;
+  color: var(--purple);
+  opacity: 0.35;
+  margin-bottom: 1.1rem;
+  display: block;
+}
+.landing-pullquote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.15rem + 1.3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  margin: 0 0 1.1rem;
+}
+.landing-pullquote-attribution {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--slate-light);
+}
+
+.landing-video-section { padding-top: 0; }
+.landing-video-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line);
+}
+.landing-video-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 .landing-cta-section {
   text-align: center;
@@ -1841,8 +1888,6 @@ button[type="submit"]:active { transform: scale(0.97); }
 
 .media-thumb .play-btn { transition: transform 0.3s var(--ease); }
 .media-card:hover .play-btn { transform: scale(1.12); }
-.media-card:hover .placeholder-icon { transform: scale(1.08); }
-.media-thumb i.placeholder-icon { transition: transform 0.3s var(--ease); }
 
 /* ==========================================================================
    Animation & Micro-interactions
@@ -1934,10 +1979,9 @@ button[type="submit"]:active { transform: scale(0.97); }
 .interest-icon { transition: transform 0.3s var(--ease); }
 .interest-item:hover .interest-icon { transform: scale(1.15) rotate(-6deg); }
 
-.media-thumb .placeholder-icon, .media-thumb .play-btn {
+.media-thumb .play-btn {
   transition: transform 0.35s var(--ease);
 }
-.media-card:hover .placeholder-icon { transform: scale(1.12); }
 .media-card:hover .play-btn { transform: scale(1.12); }
 
 .linkedin-card .profile-img, .about-image .profile-img {

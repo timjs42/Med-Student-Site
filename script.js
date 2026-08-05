@@ -286,4 +286,13 @@ document.addEventListener('DOMContentLoaded', function () {
       setStoredTheme(next);
     });
   });
+
+  // ---- Blur-up loading for media card photos ----
+  document.querySelectorAll('.media-thumb img').forEach(function (img) {
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', function () { img.classList.add('loaded'); });
+    }
+  });
 });
