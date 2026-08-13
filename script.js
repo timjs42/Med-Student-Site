@@ -32,14 +32,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Nav shadow once the page is scrolled ----
+  // ---- Nav gets more compact + gains a shadow once the page is scrolled ----
   const siteNav = document.querySelector('nav');
   if (siteNav) {
-    const toggleNavShadow = function () {
-      siteNav.style.boxShadow = window.scrollY > 8 ? '0 4px 20px rgba(31,23,41,0.08)' : 'none';
+    const toggleNavScrolled = function () {
+      siteNav.classList.toggle('nav-scrolled', window.scrollY > 8);
     };
-    toggleNavShadow();
-    window.addEventListener('scroll', toggleNavShadow, { passive: true });
+    toggleNavScrolled();
+    window.addEventListener('scroll', toggleNavScrolled, { passive: true });
+  }
+
+  // ---- Sliding underline indicator that follows hover / active nav link ----
+  const navLinksList = document.getElementById('nav-links');
+  if (navLinksList && window.matchMedia('(min-width: 861px)').matches) {
+    const indicator = document.createElement('span');
+    indicator.className = 'nav-indicator';
+    navLinksList.appendChild(indicator);
+
+    const navAnchors = navLinksList.querySelectorAll('a');
+    const activeAnchor = navLinksList.querySelector('a.active');
+
+    const moveIndicatorTo = function (el) {
+      if (!el) { indicator.classList.remove('visible'); return; }
+      const linkRect = el.getBoundingClientRect();
+      const listRect = navLinksList.getBoundingClientRect();
+      indicator.style.left = (linkRect.left - listRect.left + linkRect.width * 0.2) + 'px';
+      indicator.style.width = (linkRect.width * 0.6) + 'px';
+      indicator.classList.add('visible');
+    };
+
+    if (activeAnchor) moveIndicatorTo(activeAnchor);
+
+    navAnchors.forEach(function (link) {
+      link.addEventListener('mouseenter', function () { moveIndicatorTo(link); });
+      link.addEventListener('focus', function () { moveIndicatorTo(link); });
+    });
+    navLinksList.addEventListener('mouseleave', function () { moveIndicatorTo(activeAnchor); });
   }
 
   // ---- Contact form (index.html) ----

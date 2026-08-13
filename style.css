@@ -230,7 +230,9 @@ nav {
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   border-bottom: 1px solid var(--line);
+  transition: box-shadow 0.3s var(--ease);
 }
+nav.nav-scrolled { box-shadow: 0 4px 20px rgba(31, 23, 41, 0.08); }
 
 .nav-container {
   max-width: 1080px;
@@ -296,7 +298,21 @@ nav {
   align-items: center;
   gap: 0.4rem;
   padding-bottom: 0.9rem;
+  position: relative;
 }
+
+.nav-indicator {
+  position: absolute;
+  bottom: 4px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: left 0.3s var(--ease), width 0.3s var(--ease), opacity 0.2s var(--ease);
+}
+.nav-indicator.visible { opacity: 1; }
+@media (max-width: 860px) { .nav-indicator { display: none; } }
 
 .nav-links li a {
   display: inline-block;
@@ -311,8 +327,40 @@ nav {
 .nav-links li a:hover { background: var(--purple-pale); color: var(--purple); }
 
 .nav-links li a.active {
-  background: var(--purple);
-  color: var(--white) !important;
+  background: var(--purple-pale);
+  color: var(--purple) !important;
+  font-weight: 700;
+}
+
+/* ---------- Desktop: consolidate to a single row ---------- */
+@media (min-width: 861px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+    transition: padding 0.3s var(--ease);
+  }
+  .nav-top {
+    display: contents;
+  }
+  .nav-brand { order: 1; flex-shrink: 0; }
+  .nav-links {
+    order: 2;
+    padding-bottom: 0;
+    flex: 1;
+    justify-content: center;
+  }
+  .nav-actions { order: 3; flex-shrink: 0; }
+
+  nav.nav-scrolled .nav-container { padding-top: 0.55rem; padding-bottom: 0.55rem; }
+}
+
+@media (max-width: 860px) {
+  .nav-top { transition: padding 0.3s var(--ease); }
+  nav.nav-scrolled .nav-top { padding: 0.8rem 0; }
 }
 
 @media (max-width: 860px) {
@@ -328,6 +376,10 @@ nav {
   }
   .nav-links.active { max-height: 480px; padding-bottom: 1rem; }
   .nav-links li a { display: block; }
+  .nav-links li a.active {
+    background: var(--purple);
+    color: var(--white) !important;
+  }
 }
 
 /* ---------- Hero (index.html) ---------- */
@@ -1454,7 +1506,8 @@ footer p { font-size: 0.85rem; margin-bottom: 1rem; }
 @media print {
   nav, footer, .menu-toggle, .ekg-line, .profile-cta, .button-group,
   .contact-form, .faq-question i, iframe,
-  .scroll-progress, .back-to-top { display: none !important; }
+  .scroll-cue, .as-featured-in, .landing-nav .skip-link,
+  .reading-progress, .back-to-top { display: none !important; }
 
   body { background: #fff; color: #000; }
   a { color: #000; text-decoration: underline; }
