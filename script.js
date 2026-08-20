@@ -34,13 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ---- Nav gets more compact + gains a shadow once the page is scrolled ----
   const siteNav = document.querySelector('nav');
-  if (siteNav) {
-    const toggleNavScrolled = function () {
-      siteNav.classList.toggle('nav-scrolled', window.scrollY > 8);
-    };
-    toggleNavScrolled();
-    window.addEventListener('scroll', toggleNavScrolled, { passive: true });
-  }
+  if (siteNav) siteNav.classList.toggle('nav-scrolled', window.scrollY > 8);
 
   // ---- Sliding underline indicator that follows hover / active nav link ----
   const navLinksList = document.getElementById('nav-links');
@@ -56,8 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!el) { indicator.classList.remove('visible'); return; }
       const linkRect = el.getBoundingClientRect();
       const listRect = navLinksList.getBoundingClientRect();
-      indicator.style.left = (linkRect.left - listRect.left + linkRect.width * 0.2) + 'px';
-      indicator.style.width = (linkRect.width * 0.6) + 'px';
+      const left = linkRect.left - listRect.left + linkRect.width * 0.2;
+      const width = linkRect.width * 0.6;
+      indicator.style.transform = 'translateX(' + left + 'px) scaleX(' + width + ')';
       indicator.classList.add('visible');
     };
 
@@ -150,7 +145,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  document.querySelectorAll('.stat-modal-overlay').forEach(function (overlay) {
+  const statModalOverlays = document.querySelectorAll('.stat-modal-overlay');
+  statModalOverlays.forEach(function (overlay) {
     const closeBtn = overlay.querySelector('.stat-modal-close');
     if (closeBtn) closeBtn.addEventListener('click', function () { closeStatModal(overlay); });
     overlay.addEventListener('click', function (e) {
@@ -159,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    document.querySelectorAll('.stat-modal-overlay').forEach(function (overlay) {
+    statModalOverlays.forEach(function (overlay) {
       if (!overlay.hidden) closeStatModal(overlay);
     });
   });
@@ -183,9 +179,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let scrollTicking = false;
   function updateScrollUI() {
     const scrollTop = window.scrollY;
+    if (siteNav) siteNav.classList.toggle('nav-scrolled', scrollTop > 8);
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
-    progressBar.style.width = progress + '%';
+    progressBar.style.transform = 'scaleX(' + (progress / 100) + ')';
     backToTop.classList.toggle('visible', scrollTop > 500);
     scrollTicking = false;
   }
@@ -280,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ---- Dark mode toggle ----
+  const themeToggles = document.querySelectorAll('.theme-toggle');
   const THEME_KEY = 'angelsheu-theme';
   const root = document.documentElement;
   const getStoredTheme = function () {
@@ -294,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       root.removeAttribute('data-theme');
     }
-    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    themeToggles.forEach(function (btn) {
       btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
       const nextAction = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
       btn.setAttribute('aria-label', nextAction);
@@ -306,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Light mode is always the default unless the visitor has explicitly chosen dark before.
   applyTheme(stored === 'dark' ? 'dark' : 'light');
 
-  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+  themeToggles.forEach(function (btn) {
     btn.addEventListener('click', function () {
       const isDark = root.getAttribute('data-theme') === 'dark';
       const next = isDark ? 'light' : 'dark';

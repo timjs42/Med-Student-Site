@@ -303,13 +303,16 @@ nav.nav-scrolled { box-shadow: 0 4px 20px rgba(31, 23, 41, 0.08); }
 
 .nav-indicator {
   position: absolute;
+  left: 0;
   bottom: 4px;
   height: 2px;
+  width: 1px;
   background: linear-gradient(90deg, var(--purple), var(--blue));
   border-radius: 2px;
   opacity: 0;
   pointer-events: none;
-  transition: left 0.3s var(--ease), width 0.3s var(--ease), opacity 0.2s var(--ease);
+  transform-origin: left center;
+  transition: transform 0.3s var(--ease), opacity 0.2s var(--ease);
 }
 .nav-indicator.visible { opacity: 1; }
 @media (max-width: 860px) { .nav-indicator { display: none; } }
@@ -974,10 +977,13 @@ button[type="submit"]:hover {
   position: fixed;
   top: 0; left: 0;
   height: 3px;
-  width: 0%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  will-change: transform;
   background: linear-gradient(90deg, var(--purple), var(--blue));
   z-index: 3500;
-  transition: width 0.1s linear;
+  transition: transform 0.1s linear;
 }
 
 .back-to-top {
